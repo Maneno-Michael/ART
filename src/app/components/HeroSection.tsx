@@ -78,8 +78,8 @@ export default function HeroSection() {
 
           {/* H1 */}
           <h1
-            className="font-display text-hero-xl text-white mb-6 animate-fade-up"
-            style={{ animationDelay: '100ms' }}>
+  className="font-display font-semibold text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-white mb-6 animate-fade-up"
+  style={{ animationDelay: '100ms' }}>
             
             Advancing Agroecology{' '}
             <span className="italic text-accent relative inline-block">

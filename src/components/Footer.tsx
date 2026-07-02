@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-primary text-primary-foreground" role="contentinfo">
+    <footer className="bg-footer-bg text-primary-foreground" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-8">
         {/* Main grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-primary-foreground/10">
@@ -43,7 +43,7 @@ export default function Footer() {
               <AppLogo size={36} />
               <span className="font-display font-semibold text-lg text-primary-foreground">ART</span>
             </div>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-4 italic font-display">
+            <p className="text-primary-foreground/90 text-sm leading-relaxed mb-4 italic font-display">
               &ldquo;Nurturing Communities. Transforming Lives. Sustaining Futures.&rdquo;
             </p>
             <p className="text-primary-foreground/55 text-sm leading-relaxed mb-5">
@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* Col 2 — Quick Links */}
           <div>
-            <h3 className="text-primary-foreground font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="text-accent font-semibold text-sm uppercase tracking-widest mb-5">
               Quick Links
             </h3>
             <ul className="flex flex-col gap-3">
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Col 3 — Programs */}
           <div>
-            <h3 className="text-primary-foreground font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="text-accent font-semibold text-sm uppercase tracking-widest mb-5">
               Programs
             </h3>
             <ul className="flex flex-col gap-3">
@@ -109,7 +109,7 @@ export default function Footer() {
 
           {/* Col 4 — Newsletter */}
           <div>
-            <h3 className="text-primary-foreground font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="text-accent font-semibold text-sm uppercase tracking-widest mb-5">
               Stay Connected
             </h3>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-5">

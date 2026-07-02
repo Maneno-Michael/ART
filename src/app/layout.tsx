@@ -1,18 +1,19 @@
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
-import { DM_Sans, Fraunces } from 'next/font/google';
+import { Inter, Cormorant_Garamond } from 'next/font/google';
 import '../styles/tailwind.css';
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-dm-sans',
   display: 'swap',
 });
 
-const fraunces = Fraunces({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['300', '400', '600', '700', '900'],
+  weight: ['400', '500', '700'],
+  style: ['normal', 'italic'],
   variable: '--font-fraunces',
   display: 'swap',
 });
@@ -40,8 +41,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${fraunces.variable}`}>
-      <body className={dmSans.className}>
+    <html lang="en" className={`${inter.variable} ${cormorantGaramond.variable}`}>
+      <body className={inter.className}>
         {children}
 
         <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fartwebreva9795back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.19" />
