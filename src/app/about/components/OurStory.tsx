@@ -29,7 +29,7 @@ export default function OurStory() {
             <div className="relative h-[380px] sm:h-[480px] group">
               <div className="absolute inset-0 mask-arch overflow-hidden shadow-2xl bg-border">
                 <AppImage
-                  src="https://images.unsplash.com/photo-1709532919690-4a8fa05b7495"
+                  src="/assets/images/story.jpg"
                   alt="Supporting image beside Our Story text — community and field context showing farmers engaged in agroecological activities"
                   fill
                   className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"

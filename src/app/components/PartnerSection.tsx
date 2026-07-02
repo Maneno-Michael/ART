@@ -31,7 +31,7 @@ export default function PartnerSection() {
             
             <div className="relative h-[340px] sm:h-[420px] rounded-3xl overflow-hidden group shadow-2xl">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_17df8779b-1782921464827.png"
+                src="/assets/images/partner.jpg"
                 alt="Partnership activities — meetings, trainings, collaborative field engagement with community members"
                 fill
                 className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"

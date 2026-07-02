@@ -73,7 +73,7 @@ export default function WhyItMattersSection() {
               {/* Arch image */}
               <div className="absolute inset-0 mask-arch overflow-hidden shadow-2xl bg-border">
                 <AppImage
-                  src="https://img.rocket.new/generatedImages/rocket_gen_img_1193bb62b-1782921465726.png"
+                  src="/assets/images/matters.jpg"
                   alt="Authentic field photography — community members engaged in farming activities, women and youth participation in agroecological practices"
                   fill
                   className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
@@ -94,20 +94,7 @@ export default function WhyItMattersSection() {
                 </div>
               </div>
 
-              {/* Spinning circular text */}
-              <div className="absolute -bottom-4 -right-4 sm:-right-6 z-20 animate-spin-slow hidden sm:block">
-                <svg className="w-24 h-24 text-primary" viewBox="0 0 100 100" aria-hidden="true">
-                  <path id="circle-path" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
-                  <text className="fill-current" style={{ fontSize: '9px', fontWeight: '700', letterSpacing: '0.15em' }}>
-                    <textPath xlinkHref="#circle-path">
-                      Resilience · Justice · Agroecology ·
-                    </textPath>
-                  </text>
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-xl" aria-hidden="true">🌱</span>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

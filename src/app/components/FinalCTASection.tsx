@@ -26,7 +26,7 @@ export default function FinalCTASection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <AppImage
-          src="https://img.rocket.new/generatedImages/rocket_gen_img_182f41784-1767654796618.png"
+          src="/assets/images/meet.jpg"
           alt="Warm, hopeful community imagery — farmers and community members building sustainable futures together"
           fill
           className="object-cover object-center"

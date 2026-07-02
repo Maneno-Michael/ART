@@ -64,7 +64,7 @@ export default function Header() {
             <span className="font-display font-semibold text-base sm:text-lg tracking-tight text-primary hidden sm:block">
               ART
             </span>
-            <span className="sr-only">African Roots Transformation</span>
+            {/* <span className="sr-only">African Roots Transformation</span> */}
           </Link>
 
           {/* Desktop nav */}

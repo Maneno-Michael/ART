@@ -9,7 +9,7 @@ const programs = [
   title: 'ART Resilience Centers',
   summary: 'Community learning hubs where farmers strengthen agroecological practices, restore soil health, and share practical solutions for resilient farming systems.',
   href: '/programs/art-resilience-centers',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_176310cb4-1782921464557.png",
+  image: "/assets/images/center1.jpg",
   imageAlt: 'ART Resilience Centers — community learning hub, demonstration farm, farmers in training session',
   tag: 'Learning & Training',
   color: 'bg-primary/10 text-primary'
@@ -18,7 +18,7 @@ const programs = [
   title: 'My Food, My Power',
   summary: 'Protecting indigenous seeds, preserving food heritage, and strengthening community control over local food systems through seed saving and agroecological practices.',
   href: '/programs/my-food-my-power',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_10910e050-1782921465964.png",
+  image: "/assets/images/food.jpg",
   imageAlt: 'My Food My Power — indigenous crops, women sorting and preserving seeds, seed saving activities',
   tag: 'Food Sovereignty',
   color: 'bg-accent/10 text-accent'
@@ -27,7 +27,7 @@ const programs = [
   title: 'Her Land, Her Power',
   summary: 'Advancing women\'s land rights, legal awareness, leadership, and economic inclusion within farming communities.',
   href: '/programs/her-land-her-power',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_13987cd17-1782921465609.png",
+  image: "/assets/images/land2.jpg",
   imageAlt: 'Her Land Her Power — women farmers in community dialogue, women leadership activities',
   tag: 'Women\'s Rights',
   color: 'bg-secondary/10 text-secondary'
@@ -36,7 +36,7 @@ const programs = [
   title: 'ART4Equity',
   summary: 'Promoting inclusive participation of women and young people in agriculture, leadership, and community decision-making processes.',
   href: '/programs/art4equity',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_17cd0b3a2-1782921465849.png",
+  image: "/assets/images/equity.jpg",
   imageAlt: 'ART4Equity — youth and women in training sessions, community participation activities',
   tag: 'Equity & Inclusion',
   color: 'bg-primary/10 text-primary'
@@ -45,7 +45,7 @@ const programs = [
   title: 'Voices from the Roots',
   summary: 'Documenting grassroots experiences, indigenous knowledge, and community perspectives to influence policy, advocacy, and public understanding.',
   href: '/programs/voices-from-the-roots',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_129cdbc18-1775752684323.png",
+  image: "/assets/images/advoc.jpg",
   imageAlt: 'Voices from the Roots — storytelling sessions, community interviews, documentation activities',
   tag: 'Advocacy',
   color: 'bg-accent/10 text-accent',
