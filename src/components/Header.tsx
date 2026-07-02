@@ -55,10 +55,11 @@ export default function Header() {
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
             ? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-border'
-            : 'bg-transparent'
+            : 'bg-background/75'
         }`}
         role="banner"
       >
+
         <nav
           className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between"
           aria-label="Main navigation"
