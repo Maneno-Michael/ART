@@ -45,12 +45,6 @@ export default function Header() {
   return (
     <>
       {/* Skip to content */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-semibold"
-      >
-        Skip to content
-      </a>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
@@ -66,7 +60,7 @@ export default function Header() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 focus-ring" aria-label="African Roots Transformation — Home">
-            <AppLogo size={36} />
+            <AppLogo size={80} />
             <span className="font-display font-semibold text-base sm:text-lg tracking-tight text-primary hidden sm:block">
               ART
             </span>

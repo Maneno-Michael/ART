@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Col 1 — About */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <AppLogo size={36} />
+              <AppLogo size={80} />
               <span className="font-display font-semibold text-lg text-primary-foreground">ART</span>
             </div>
             <p className="text-primary-foreground/90 text-sm leading-relaxed mb-4 italic font-display">
