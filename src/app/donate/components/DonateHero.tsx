@@ -12,7 +12,7 @@ export default function DonateHero() {
       {/* Background */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <AppImage
-          src="https://img.rocket.new/generatedImages/rocket_gen_img_1efc205a0-1782921465989.png"
+          src="/assets/images/donate.jpg"
           alt="Donate page hero — authentic community imagery showing farmers, women leaders, youth engagement and agroecological activities in grassroots settings with dim atmospheric natural lighting and deep shadows"
           fill
           priority

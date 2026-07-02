@@ -12,7 +12,7 @@ export default function AboutHero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <AppImage
-          src="https://img.rocket.new/generatedImages/rocket_gen_img_1132cd592-1782921466001.png"
+          src="/assets/images/about.jpg"
           alt="ART team and community members — farmers and community members interacting, women and youth participation in field activities"
           fill
           priority

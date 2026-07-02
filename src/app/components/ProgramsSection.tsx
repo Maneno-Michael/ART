@@ -18,7 +18,7 @@ const programs = [
   title: 'My Food, My Power',
   summary: 'Protecting indigenous seeds, preserving food heritage, and strengthening community control over local food systems through seed saving and agroecological practices.',
   href: '/programs/my-food-my-power',
-  image: "/assets/images/food.jpg",
+  image: "/assets/images/food2.jpg",
   imageAlt: 'My Food My Power — indigenous crops, women sorting and preserving seeds, seed saving activities',
   tag: 'Food Sovereignty',
   color: 'bg-accent/10 text-accent'

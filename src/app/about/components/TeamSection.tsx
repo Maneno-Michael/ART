@@ -8,7 +8,7 @@ const team = [
   name: 'ART Founder',
   role: 'Founder & Executive Director',
   bio: 'Community organizer and agroecology advocate with deep roots in grassroots development across East Africa.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1c4f12ce5-1782921465120.png",
+ image: "/assets/images/found.jpg",
   imageAlt: 'Team member headshot — ART Founder, natural community setting',
   category: 'Leadership'
 },
@@ -16,7 +16,7 @@ const team = [
   name: 'Programs Lead',
   role: 'Programs & Community Engagement',
   bio: 'Farmer trainer and community mobilizer specializing in agroecological practices and women\'s leadership.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_10d8e7d5e-1772203315807.png",
+  image: "/assets/images/found3.jpg",
   imageAlt: 'Team member headshot — Programs Lead, community engagement',
   category: 'Programs'
 },
@@ -24,7 +24,7 @@ const team = [
   name: 'Communications Officer',
   role: 'Communications & Advocacy',
   bio: 'Storyteller and digital communicator documenting grassroots voices and amplifying community perspectives.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_10d8e7d5e-1772203315807.png",
+  image: "/assets/images/found1.jpg",
   imageAlt: 'Team member headshot — Communications Officer, advocacy role',
   category: 'Communications'
 },
@@ -32,7 +32,7 @@ const team = [
   name: 'Field Coordinator',
   role: 'Field Operations',
   bio: 'On-the-ground coordinator supporting community resilience initiatives and farmer training programs.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1d254a698-1782921465830.png",
+  image: "/assets/images/found2.jpg",
   imageAlt: 'Team member headshot — Field Coordinator, field operations',
   category: 'Programs'
 }];

@@ -52,7 +52,7 @@ export default function HeroSection() {
       {/* Hero image — midground layer */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <AppImage
-          src="https://img.rocket.new/generatedImages/rocket_gen_img_1cade5a2f-1782921466016.png"
+          src="/assets/images/comm.jpg"
           alt="Smallholder farmers working on agroecological farm in Kenya — women and youth participating in community farming activities"
           fill
           priority

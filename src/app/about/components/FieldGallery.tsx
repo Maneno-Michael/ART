@@ -5,27 +5,27 @@ import AppImage from '@/components/ui/AppImage';
 
 const galleryImages = [
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_15ce4e00d-1782921465995.png",
+  src: "/assets/images/gal.jpg",
   alt: 'Field gallery — Machakos community activities, farmers engaged in agroecological practices'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_12612f77b-1782921464225.png",
+  src: "/assets/images/gal1.jpg",
   alt: 'Field gallery — Utawala farm activities, women-led urban farming in Nairobi'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_18ce6694c-1782921466008.png",
+  src: "/assets/images/gal2.jpg",
   alt: 'Field gallery — Embu community activities, farmer engagement and training'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_125f97205-1782921464919.png",
+  src: "/assets/images/gal4.jpg",
   alt: 'Field gallery — farmer engagement and training session, community learning activities'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_1cc78437b-1782921465946.png",
+  src: "/assets/images/gal1.jpg",
   alt: 'Field gallery — indigenous seed preservation and community food sovereignty activities'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_1f9b1d893-1782921464457.png",
+  src: "/assets/images/gal5.jpg",
   alt: 'Field gallery — women and youth participation in agroecological farming activities'
 }];
 
