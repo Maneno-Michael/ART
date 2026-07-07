@@ -61,9 +61,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 focus-ring" aria-label="African Roots Transformation — Home">
             <AppLogo size={80} />
-            <span className="font-display font-semibold text-base sm:text-lg tracking-tight text-primary hidden sm:block">
-              ART
-            </span>
+            <span className="font-serif text-xl md:text-2xl tracking-tight">
+            <span className="text-primary">African</span>{' '}
+            <span className="text-accent">Roots</span>{' '}
+            <span className="text-primary-dark">Transformation</span>
+          </span>
             {/* <span className="sr-only">African Roots Transformation</span> */}
           </Link>
 

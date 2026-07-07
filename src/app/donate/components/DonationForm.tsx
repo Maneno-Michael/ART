@@ -70,7 +70,7 @@ export default function DonationForm() {
   return (
     <section className="py-16 sm:py-20 bg-background" aria-labelledby="donation-form-heading">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        <div className="bg-card border border-border rounded-3xl shadow-2xl overflow-hidden">
+        <div className="bg-card border border-border rounded-md shadow-2xl overflow-hidden">
           {/* Header */}
           <div className="bg-primary px-8 py-6">
             <h2 id="donation-form-heading" className="font-display text-2xl text-primary-foreground mb-1">
@@ -83,7 +83,7 @@ export default function DonationForm() {
 
           <form onSubmit={handleSubmit} className="p-6 sm:p-8" noValidate>
             {/* Donation type toggle */}
-            <div className="flex rounded-xl overflow-hidden border border-border mb-8" role="group" aria-label="Donation frequency">
+            <div className="flex rounded-md overflow-hidden border border-border mb-8" role="group" aria-label="Donation frequency">
               {(['one-time', 'monthly'] as DonationType[]).map((type) => (
                 <button
                   key={type}
@@ -110,7 +110,7 @@ export default function DonationForm() {
                     key={amount}
                     type="button"
                     onClick={() => { setSelectedAmount(amount); setCustomAmount(''); }}
-                    className={`py-3 rounded-xl text-base font-display font-bold transition-all border-2 focus-ring ${
+                    className={`py-3 rounded-md text-base font-display font-bold transition-all border-2 focus-ring ${
                       selectedAmount === amount && !customAmount
                         ? 'bg-primary text-primary-foreground border-primary'
                         : 'bg-card text-foreground border-border hover:border-primary/40'
@@ -138,7 +138,7 @@ export default function DonationForm() {
                   placeholder="Enter amount"
                   value={customAmount}
                   onChange={(e) => { setCustomAmount(e.target.value); setSelectedAmount(null); }}
-                  className="w-full pl-8 pr-4 py-3 border border-border rounded-xl bg-background text-foreground placeholder:text-muted focus:outline-none focus:border-primary transition-colors"
+                  className="w-full pl-8 pr-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted focus:outline-none focus:border-primary transition-colors"
                   aria-label="Custom donation amount in USD"
                 />
               </div>
@@ -153,7 +153,7 @@ export default function DonationForm() {
                     key={method.id}
                     type="button"
                     onClick={() => setPaymentMethod(method.id)}
-                    className={`p-4 rounded-xl border-2 text-center transition-all focus-ring ${
+                    className={`p-4 rounded-lg border-2 text-center transition-all focus-ring ${
                       paymentMethod === method.id
                         ? 'border-primary bg-primary/5' :'border-border hover:border-primary/30'
                     }`}
@@ -167,7 +167,7 @@ export default function DonationForm() {
               </div>
               {/* TODO: Render payment-specific UI based on selected method */}
               <p className="text-xs text-muted-foreground mt-3 italic">
-                * Payment processing will be configured with {paymentMethod === 'mpesa' ? 'Safaricom Daraja API' : paymentMethod === 'card' ? 'Stripe' : paymentMethod === 'paypal' ? 'PayPal SDK' : 'bank transfer details'}.
+                * Payment processing is configured with {paymentMethod === 'mpesa' ? 'Safaricom Daraja API' : paymentMethod === 'card' ? 'Stripe' : paymentMethod === 'paypal' ? 'PayPal SDK' : 'bank transfer details'}.
               </p>
             </fieldset>
 
@@ -220,7 +220,7 @@ export default function DonationForm() {
                     placeholder="Honoree's name"
                     value={honorName}
                     onChange={(e) => setHonorName(e.target.value)}
-                    className="w-full px-4 py-2.5 border border-border rounded-xl bg-background text-foreground placeholder:text-muted text-sm focus:outline-none focus:border-primary transition-colors"
+                    className="w-full px-4 py-2.5 border border-border rounded-md bg-background text-foreground placeholder:text-muted text-sm focus:outline-none focus:border-primary transition-colors"
                     aria-label="Honoree name for dedication"
                   />
                 </div>
@@ -229,7 +229,7 @@ export default function DonationForm() {
 
             {/* Total */}
             {effectiveAmount && effectiveAmount > 0 && (
-              <div className="flex justify-between items-center mb-6 bg-primary/5 rounded-xl px-5 py-4">
+              <div className="flex justify-between items-center mb-6 bg-primary/5 rounded-md px-5 py-4">
                 <span className="font-semibold text-foreground">
                   {donationType === 'monthly' ? 'Monthly Total' : 'Donation Total'}
                 </span>
@@ -244,7 +244,7 @@ export default function DonationForm() {
             <button
               type="submit"
               disabled={!effectiveAmount || effectiveAmount <= 0 || loading}
-              className="btn-shimmer w-full bg-accent text-accent-foreground py-4 rounded-xl font-semibold text-base hover:bg-accent/90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed focus-ring flex items-center justify-center gap-2"
+              className="btn-shimmer w-full bg-accent text-accent-foreground py-4 rounded-md font-semibold text-base hover:bg-accent/90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed focus-ring flex items-center justify-center gap-2"
               aria-busy={loading}
             >
               {loading ? (

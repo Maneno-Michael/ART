@@ -41,7 +41,11 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <AppLogo size={80} />
-              <span className="font-display font-semibold text-lg text-primary-foreground">ART</span>
+             <span className="font-serif text-md md:text-lg tracking-tight">
+            <span className="text-accent">African</span>{' '}
+            <span className="text-accent">Roots</span>{' '}
+            <span className="text-primary-dark">Transformation</span>
+          </span>
             </div>
             <p className="text-primary-foreground/90 text-sm leading-relaxed mb-4 italic font-display">
               &ldquo;Nurturing Communities. Transforming Lives. Sustaining Futures.&rdquo;
