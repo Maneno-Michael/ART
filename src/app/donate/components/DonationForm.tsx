@@ -69,7 +69,7 @@ export default function DonationForm() {
 
   return (
     <section className="py-16 sm:py-20 bg-background" aria-labelledby="donation-form-heading">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <div className="bg-card border border-border rounded-md shadow-2xl overflow-hidden">
           {/* Header */}
           <div className="bg-primary px-8 py-6">
