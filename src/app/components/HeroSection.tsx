@@ -1,12 +1,22 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import AppImage from '@/components/ui/AppImage';
+
+const slides = [
+  { src: '/assets/images/slide1.jpeg', alt: 'Farmer harvesting maize from an agroecological farm' },
+  { src: '/assets/images/slide2.jpeg', alt: 'Community member harvesting fresh vegetables' },
+  { src: '/assets/images/slide3.jpeg', alt: 'Women farmers working together on a hillside farm plot' },
+  { src: '/assets/images/slide4.jpeg', alt: 'Farmer inspecting healthy crop growth in the field' },
+];
+
+const SLIDE_DURATION = 5000;
 
 export default function HeroSection() {
   const blobRef1 = useRef<HTMLDivElement>(null);
   const blobRef2 = useRef<HTMLDivElement>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -26,6 +36,13 @@ export default function HeroSection() {
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slides.length);
+    }, SLIDE_DURATION);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -49,19 +66,42 @@ export default function HeroSection() {
         <div className="absolute top-[30%] right-[10%] w-[300px] h-[300px] blob-secondary opacity-10 animate-float" />
       </div>
 
-      {/* Hero image — midground layer */}
+      {/* Hero image carousel — midground layer */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
-        <AppImage
-          src="/assets/images/comm.jpg"
-          alt="Smallholder farmers working on agroecological farm in Kenya — women and youth participating in community farming activities"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw" />
-        
-        {/* Gradient scrim — dark enough for white text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+        {slides?.map((slide, index) => (
+          <div
+            key={slide?.src}
+            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            style={{ opacity: index === activeSlide ? 1 : 0 }}
+          >
+            <AppImage
+              src={slide?.src}
+              alt={slide?.alt}
+              fill
+              priority={index === 0}
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+          </div>
+        ))}
+
+        {/* Gradient scrim — dark enough for white text contrast, sits above all slides */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/45 to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+      </div>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-24 sm:bottom-28 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
+        {slides?.map((slide, index) => (
+          <button
+            key={slide?.src}
+            onClick={() => setActiveSlide(index)}
+            aria-label={`Show slide ${index + 1}`}
+            className={`h-1.5 rounded-full transition-all duration-300 focus-ring ${
+              index === activeSlide ? 'w-8 bg-white' : 'w-1.5 bg-white/40 hover:bg-white/60'
+            }`}
+          />
+        ))}
       </div>
 
       {/* Content layer — foreground */}
