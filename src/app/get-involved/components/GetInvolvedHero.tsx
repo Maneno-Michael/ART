@@ -7,7 +7,7 @@ export default function GetInvolvedHero() {
     <section className="relative min-h-[60vh] flex items-end overflow-hidden">
       <div className="absolute inset-0">
         <AppImage
-          src="https://picsum.photos/seed/get-involved-hero/1400/800"
+          src="/assets/images/team.jpg"
           alt="Volunteers and community organizers working alongside farmers in field training session, shadowed atmospheric environment with warm amber light accents"
           fill
           className="object-cover"

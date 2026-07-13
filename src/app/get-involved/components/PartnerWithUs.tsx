@@ -77,7 +77,7 @@ export default function PartnerWithUs() {
           {/* Image */}
           <div className="reveal reveal-hidden relative rounded-3xl overflow-hidden shadow-xl" style={{ aspectRatio: '4/3' }}>
             <AppImage
-              src="https://picsum.photos/seed/partner-section/800/600"
+              src="/assets/images/part.jpg"
               alt="NGO representatives and ART team in collaborative workshop, diverse group around table with community plans and maps"
               fill
               className="object-cover"

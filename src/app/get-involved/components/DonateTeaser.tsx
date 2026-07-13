@@ -41,7 +41,7 @@ export default function DonateTeaser() {
           {/* Image */}
           <div className="reveal reveal-hidden relative rounded-3xl overflow-hidden shadow-xl" style={{ aspectRatio: '4/3' }}>
             <AppImage
-              src="https://picsum.photos/seed/donate-teaser/800/600"
+              src="/assets/images/support.jpg"
               alt="Farmer receiving seeds and tools at community distribution event in Machakos County, warm sunlit outdoor setting"
               fill
               className="object-cover"
