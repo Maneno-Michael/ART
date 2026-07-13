@@ -54,7 +54,7 @@ export default function Footer() {
               African Roots Transformation (ART) is a Kenya-based nonprofit advancing agroecology, community resilience, food sovereignty, and social justice through locally led solutions across Africa.
             </p>
             <p className="text-primary-foreground/40 text-xs font-mono">
-              Reg: NGO/CERT/2018/0042
+            RE_No.: CLG-87TKRADA
             </p>
             {/* Social icons */}
             <div className="flex gap-3 mt-5">
