@@ -9,7 +9,7 @@ export default function ProgramsHero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <AppImage
-          src="https://picsum.photos/seed/programs-hero/1400/800"
+          src="/assets/images/program.jpg"
           alt="Collage-style documentary image of Kenyan farmers, women leaders, youth in agroecological training, dim atmospheric light with warm amber tones"
           fill
           className="object-cover"
