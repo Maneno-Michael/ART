@@ -100,10 +100,6 @@ export default function TeamSection() {
             </div>
           )}
         </div>
-
-        <p className="text-center text-muted-foreground text-sm mt-8 italic">
-          *Team profiles will be updated with official photos and biographies provided by ART.
-        </p>
       </div>
     </section>);
 

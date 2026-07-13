@@ -107,10 +107,6 @@ export default function FieldGallery() {
             )}
           </div>
         </div>
-
-        <p className="text-center text-muted-foreground text-sm mt-6 italic">
-          *All photos will be replaced with ART&apos;s own documentary-style field photography from community programs.
-        </p>
       </div>
     </section>);
 
