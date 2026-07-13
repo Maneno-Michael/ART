@@ -171,6 +171,113 @@
   details[open] summary ~ * {
     animation: sweep 0.3s ease-in-out;
   }
+
+  /* ============================
+     Form inputs
+     Used by VolunteerSection, NewsletterSection, PartnerWithUs, etc.
+     ============================ */
+  .input-field {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--foreground);
+    font-size: 0.875rem;
+    font-family: var(--font-sans);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .input-field::placeholder {
+    color: var(--muted);
+    opacity: 0.7;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.15);
+  }
+
+  .input-field:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  /* Select-specific caret spacing (native selects already used in VolunteerSection) */
+  select.input-field {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238A7D6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+  }
+
+  /* ============================
+     Buttons
+     ============================ */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #234012;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.25);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: var(--radius);
+    border: 1.5px solid var(--primary);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  /* ============================
+     Tag pills
+     Used for volunteer areas / categories
+     ============================ */
+  .tag-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    white-space: nowrap;
+  }
 }
 
 /* Keyframes */
