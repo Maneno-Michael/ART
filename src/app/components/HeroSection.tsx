@@ -73,7 +73,7 @@ export default function HeroSection() {
             style={{ animationDelay: '0ms' }}>
             
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-dot" aria-hidden="true" />
-            <span className="section-label text-white/80">Kenya-Based Nonprofit · Est. 2018</span>
+            <span className="section-label text-white/80">Nurturing Communities. Transforming Lives</span>
           </div>
 
           {/* H1 */}
