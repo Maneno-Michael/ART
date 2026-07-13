@@ -307,7 +307,7 @@ export default function DonationForm() {
                 {Object.entries(donationImpact).map(([amt, impact]) => (
                   <li key={amt} className="flex gap-3 items-start text-sm">
                     <span className="font-bold text-accent shrink-0 mt-0.5">${amt}</span>
-                    <span className="text-muted-foreground">{impact}</span>
+                    <span className="text-muted-foreground text-xs">{impact}</span>
                   </li>
                 ))}
               </ul>

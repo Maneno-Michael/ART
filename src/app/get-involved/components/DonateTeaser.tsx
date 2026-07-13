@@ -76,7 +76,7 @@ export default function DonateTeaser() {
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               Every contribution directly supports locally led action and community resilience across Kenya and East Africa.
             </p>
-            <Link href="/donate" className="btn-accent text-base">
+            <Link href="/donate" className=" btn-accent text-center bg-accent text-accent-foreground text-base p-3 rounded-full focus-ring font-semibold">
               Donate Now →
             </Link>
           </div>
