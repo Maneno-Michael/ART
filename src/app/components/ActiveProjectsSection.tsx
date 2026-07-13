@@ -10,7 +10,7 @@ const projects = [
   name: 'Machakos Resilience Hub',
   location: 'Machakos County',
   description: 'Community advocacy and resilience-building initiatives focused on women\'s land rights, food security, social justice, and strengthening locally led systems for sustainable livelihoods.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1b983cab4-1782921465986.png",
+  image: "/assets/images/macha.jpg",
   imageAlt: 'Machakos Resilience Hub — community and field activity in Machakos County, Kenya',
   tags: ["Women\'s Rights", 'Food Security', 'Advocacy'],
   stats: [
@@ -22,7 +22,7 @@ const projects = [
   name: 'Utawala Urban Farm',
   location: 'Nairobi County',
   description: 'Supporting women-led urban agroecological farming through regenerative production practices, soil restoration, indigenous crops, and practical farmer training.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1469eb67c-1782921465924.png",
+  image: "/assets/images/nairobi.jpg",
   imageAlt: 'Utawala Urban Farm — women-led urban agroecological farming in Nairobi, soil restoration and indigenous crops',
   tags: ['Urban Farming', 'Women-Led', 'Agroecology'],
   stats: [
