@@ -5,7 +5,7 @@ import Icon from '@/components/ui/AppIcon';
 
 export default function ProgramsHero() {
   return (
-    <section className="relative min-h-[60vh] flex items-end overflow-hidden pt-20">
+    <section className="relative min-h-[60vh] flex items-end overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <AppImage

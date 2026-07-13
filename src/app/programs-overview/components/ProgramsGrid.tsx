@@ -137,13 +137,7 @@ export default function ProgramsGrid() {
                       </span>
                     ))}
                   </div>
-                  <Link
-                    href={prog.href}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-3 transition-all duration-200 shrink-0 ml-2"
-                  >
-                    Learn More
-                    <Icon name="ArrowRightIcon" size={14} />
-                  </Link>
+                  
                 </div>
               </div>
             </div>
@@ -184,13 +178,7 @@ export default function ProgramsGrid() {
                     ))}
                   </div>
                 </div>
-                <Link
-                  href={programs[3].href}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-3 transition-all duration-200 self-start"
-                >
-                  Learn More
-                  <Icon name="ArrowRightIcon" size={14} />
-                </Link>
+                
               </div>
             </div>
           </div>
@@ -226,13 +214,7 @@ export default function ProgramsGrid() {
                     </span>
                   ))}
                 </div>
-                <Link
-                  href={programs[4].href}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-3 transition-all duration-200 shrink-0 ml-2"
-                >
-                  Learn More
-                  <Icon name="ArrowRightIcon" size={14} />
-                </Link>
+                
               </div>
             </div>
           </div>

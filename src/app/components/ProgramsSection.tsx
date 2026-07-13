@@ -8,7 +8,7 @@ const programs = [
 {
   title: 'ART Resilience Centers',
   summary: 'Community learning hubs where farmers strengthen agroecological practices, restore soil health, and share practical solutions for resilient farming systems.',
-  href: '/programs/art-resilience-centers',
+  href: '/programs-overview',
   image: "/assets/images/center1.jpg",
   imageAlt: 'ART Resilience Centers — community learning hub, demonstration farm, farmers in training session',
   tag: 'Learning & Training',
@@ -17,7 +17,7 @@ const programs = [
 {
   title: 'My Food, My Power',
   summary: 'Protecting indigenous seeds, preserving food heritage, and strengthening community control over local food systems through seed saving and agroecological practices.',
-  href: '/programs/my-food-my-power',
+  href: '/programs-overview',
   image: "/assets/images/food2.jpg",
   imageAlt: 'My Food My Power — indigenous crops, women sorting and preserving seeds, seed saving activities',
   tag: 'Food Sovereignty',
@@ -26,16 +26,16 @@ const programs = [
 {
   title: 'Her Land, Her Power',
   summary: 'Advancing women\'s land rights, legal awareness, leadership, and economic inclusion within farming communities.',
-  href: '/programs/her-land-her-power',
+  href: '/programs-overview',
   image: "/assets/images/land2.jpg",
   imageAlt: 'Her Land Her Power — women farmers in community dialogue, women leadership activities',
   tag: 'Women\'s Rights',
   color: 'bg-secondary/10 text-secondary'
 },
 {
-  title: 'ART4Equity',
-  summary: 'Promoting inclusive participation of women and young people in agriculture, leadership, and community decision-making processes.',
-  href: '/programs/art4equity',
+  title: 'ART Green Schools',
+  summary: 'Nurturing the next generation through climate leadership, agroecology, indigenous knowledge, and hands-on learning experiences connecting students with nature and community.',
+  href: '/programs-overview',
   image: "/assets/images/equity.jpg",
   imageAlt: 'ART4Equity — youth and women in training sessions, community participation activities',
   tag: 'Equity & Inclusion',
@@ -44,7 +44,7 @@ const programs = [
 {
   title: 'Voices from the Roots',
   summary: 'Documenting grassroots experiences, indigenous knowledge, and community perspectives to influence policy, advocacy, and public understanding.',
-  href: '/programs/voices-from-the-roots',
+  href: '/programs-overview',
   image: "/assets/images/advoc.jpg",
   imageAlt: 'Voices from the Roots — storytelling sessions, community interviews, documentation activities',
   tag: 'Advocacy',
@@ -111,7 +111,7 @@ export default function ProgramsSection() {
 
         <div className={`mt-10 text-center transition-all duration-700 delay-500 ${visible ? 'opacity-100' : 'opacity-0'}`}>
           <Link
-            href="/programs"
+            href="/programs-overview"
             className="btn-shimmer inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-3.5 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transition-all focus-ring">
             
             Explore All Programs
