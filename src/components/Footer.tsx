@@ -158,6 +158,11 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 text-xs text-primary-foreground/40">
           <p>© 2026 African Roots Transformation (ART). All Rights Reserved.</p>
+          <div>
+            <p> P. O box 72950-00200, Ojijo Road- Westpark Suits, Nairobi Kenya </p>
+            <p>Email: info@africanrootstransformation.org</p>
+            <p>Call Us: +254797463939 </p>
+          </div>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-primary-foreground/70 transition-colors focus-ring">
               Privacy Policy
