@@ -54,7 +54,7 @@ export default function ProgramsApproach() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-muted">
+    <section ref={sectionRef} className="py-20 bg-primary/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14 reveal reveal-hidden">
           <span className="section-label">Our Approach</span>

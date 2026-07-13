@@ -6,7 +6,7 @@ export default function ProgramsCTA() {
     <section className="py-20 bg-primary relative overflow-hidden">
       <div className="absolute inset-0 blob-amber opacity-20 pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 className="text-hero-lg font-extrabold text-primary-foreground mb-5">
+        <h2 className="text-hero-lg  text-primary-foreground mb-5">
           Building Stronger Communities Through Practical Action
         </h2>
         <p className="text-lg text-primary-foreground/80 leading-relaxed mb-10 max-w-2xl mx-auto">
