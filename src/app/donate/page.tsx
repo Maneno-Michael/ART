@@ -28,7 +28,7 @@ export default function DonatePage() {
       <main id="main-content">
         <DonateHero />
         <DonationForm />
-        <DonationImpactCards />
+        {/* <DonationImpactCards /> */}
         <FundAllocation />
         <TrustSignals />
         <DonateFAQ />

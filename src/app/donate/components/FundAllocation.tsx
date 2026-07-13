@@ -32,7 +32,7 @@ export default function FundAllocation() {
   return (
     <section
       ref={ref}
-      className="py-16 sm:py-20 bg-background"
+      className="py-16 sm:py-20 bg-card"
       aria-labelledby="fund-allocation-heading"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -113,7 +113,7 @@ export default function FundAllocation() {
         <div className={`mt-10 text-center transition-all duration-700 delay-400 ${visible ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-muted-foreground text-sm">
             African Roots Transformation (ART) is a registered nonprofit in Kenya.{' '}
-            <span className="font-mono text-xs bg-border/50 px-2 py-0.5 rounded">NGO/CERT/2018/0042</span>
+            <span className="font-mono text-xs bg-border/50 px-2 py-0.5 rounded">CLG-87TKRADA</span>
           </p>
         </div>
       </div>

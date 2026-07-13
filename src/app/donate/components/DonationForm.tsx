@@ -9,10 +9,10 @@ type PaymentMethod = 'mpesa' | 'card' | 'paypal' | 'bank';
 const presetAmounts = [30, 100, 150, 250];
 
 const donationImpact: Record<number, string> = {
-  30: 'trains 1 woman farmer in climate-resilient seed saving techniques',
-  100: 'funds a community seed cataloguing session, preserving up to 20 indigenous varieties',
-  150: 'supports a village land rights workshop, helping 15 families understand their legal protections',
-  250: 'equips an ART Resilience Centre with tools and materials for an entire growing season',
+  30: 'Provides indigenous seeds and basic farming tools for one farmer.',
+  100: 'Supports community dialogue and advocacy activities focused on women\'s land rights and food security.',
+  150: 'Supports youth agroecology mentorship initiatives for climate resilience and community learning.',
+  250: 'Supports demonstration plots and community learning activities at a resilience site.',
 };
 
 const paymentMethods: { id: PaymentMethod; label: string; icon: string; description: string }[] = [
@@ -290,13 +290,14 @@ export default function DonationForm() {
           <aside className="space-y-5" aria-label="Donation impact information">
             {/* Impact story */}
             <div className="bg-primary text-primary-foreground rounded-xl p-6">
-              <h2 className="font-display text-lg font-semibold mb-3">Your Impact</h2>
-              <blockquote className="text-primary-foreground/85 text-sm italic mb-4">
-                "Since joining ART's Her Land Her Power program, I have legal title to my family's land for the first time."
-              </blockquote>
-              <cite className="text-accent text-xs not-italic font-semibold">
-                — Margaret Achieng, Siaya County
-              </cite>
+              <h2 className="font-display text-lg font-semibold mb-3">Your Support in Action</h2>
+              <h2
+            id="impact-cards-heading"
+            className="font-display text-3xl text-accent sm:text-4xl"
+          >
+            How Donations Help
+          </h2>
+
             </div>
 
             {/* What your gift does */}
