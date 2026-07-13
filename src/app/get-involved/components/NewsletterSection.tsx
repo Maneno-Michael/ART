@@ -14,7 +14,7 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="py-16 bg-muted border-y border-border">
+    <section className="py-16 bg-primary/5 border-y border-border">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
           <Icon name="EnvelopeIcon" size={24} className="text-primary" />

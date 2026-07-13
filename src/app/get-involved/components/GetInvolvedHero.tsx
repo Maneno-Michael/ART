@@ -4,7 +4,7 @@ import Icon from '@/components/ui/AppIcon';
 
 export default function GetInvolvedHero() {
   return (
-    <section className="relative min-h-[60vh] flex items-end overflow-hidden pt-20">
+    <section className="relative min-h-[60vh] flex items-end overflow-hidden">
       <div className="absolute inset-0">
         <AppImage
           src="https://picsum.photos/seed/get-involved-hero/1400/800"
@@ -37,6 +37,11 @@ export default function GetInvolvedHero() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full pointer-events-none z-10" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-auto">
+          <path fill="#F5F0E8" d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" />
+        </svg>
       </div>
     </section>
   );
