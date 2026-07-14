@@ -28,7 +28,11 @@ export const metadata: Metadata = {
   title: 'African Roots Transformation — Agroecology & Community Resilience',
   description: 'ART is a Kenya-based nonprofit advancing agroecology, food sovereignty, and social justice through locally led community programs across Africa.',
   icons: {
-    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
   },
   openGraph: {
     title: 'African Roots Transformation (ART)',
