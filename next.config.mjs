@@ -1,9 +1,9 @@
 import { imageHosts } from './image-hosts.config.mjs';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   productionBrowserSourceMaps: true,
   distDir: process.env.DIST_DIR || '.next',
+  devIndicators: false,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -21,13 +21,6 @@ const nextConfig = {
       dev: dev
     }
   ) {
-    config.module.rules.push({
-      test: /\.(jsx|tsx)$/,
-      exclude: [/node_modules/],
-      use: [{
-        loader: '@dhiwise/component-tagger/nextLoader',
-      }],
-    });
     if (dev) {
       const ignoredPaths = (process.env.WATCH_IGNORED_PATHS || '')
         .split(',')

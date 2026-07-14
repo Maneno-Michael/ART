@@ -18,7 +18,7 @@ const programs = [
   title: 'My Food, My Power',
   summary: 'Protecting indigenous seeds, preserving food heritage, and strengthening community control over local food systems through seed saving and agroecological practices.',
   href: '/programs-overview',
-  image: "/assets/images/food2.jpg",
+  image: "/assets/images/my food.jpeg",
   imageAlt: 'My Food My Power — indigenous crops, women sorting and preserving seeds, seed saving activities',
   tag: 'Food Sovereignty',
   color: 'bg-accent/10 text-accent'
@@ -27,7 +27,7 @@ const programs = [
   title: 'Her Land, Her Power',
   summary: 'Advancing women\'s land rights, legal awareness, leadership, and economic inclusion within farming communities.',
   href: '/programs-overview',
-  image: "/assets/images/land2.jpg",
+  image: "/assets/images/her.jpg",
   imageAlt: 'Her Land Her Power — women farmers in community dialogue, women leadership activities',
   tag: 'Women\'s Rights',
   color: 'bg-secondary/10 text-secondary'
@@ -36,7 +36,7 @@ const programs = [
   title: 'ART Green Schools',
   summary: 'Nurturing the next generation through climate leadership, agroecology, indigenous knowledge, and hands-on learning experiences connecting students with nature and community.',
   href: '/programs-overview',
-  image: "/assets/images/equity.jpg",
+  image: "/assets/images/school.jpeg",
   imageAlt: 'ART4Equity — youth and women in training sessions, community participation activities',
   tag: 'Equity & Inclusion',
   color: 'bg-primary/10 text-primary'
@@ -45,7 +45,7 @@ const programs = [
   title: 'Voices from the Roots',
   summary: 'Documenting grassroots experiences, indigenous knowledge, and community perspectives to influence policy, advocacy, and public understanding.',
   href: '/programs-overview',
-  image: "/assets/images/advoc.jpg",
+  image: "/assets/images/voices.jpeg",
   imageAlt: 'Voices from the Roots — storytelling sessions, community interviews, documentation activities',
   tag: 'Advocacy',
   color: 'bg-accent/10 text-accent',
