@@ -159,7 +159,7 @@ export default function HeroSection() {
               </svg>
             </Link>
             <Link
-              href="/programs"
+              href="/programs-overview"
               className="inline-flex items-center gap-2 border-2 border-white/40 text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-white/10 backdrop-blur-sm transition-all focus-ring">
               
               Our Programs
