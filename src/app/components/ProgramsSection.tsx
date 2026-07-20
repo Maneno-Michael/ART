@@ -76,7 +76,7 @@ export default function ProgramsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className={`mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className="section-label text-accent mb-3 block">What We Do</span>
+          <span className="section-label text-accent mb-3 block">What We Do | Our Programs</span>
           <h2
             id="programs-heading"
             className="font-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 max-w-2xl">
@@ -109,7 +109,7 @@ export default function ProgramsSection() {
           </div>
         </div>
 
-        <div className={`mt-10 text-center transition-all duration-700 delay-500 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+        {/* <div className={`mt-10 text-center transition-all duration-700 delay-500 ${visible ? 'opacity-100' : 'opacity-0'}`}>
           <Link
             href="/programs-overview"
             className="btn-shimmer inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-3.5 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transition-all focus-ring">
@@ -119,7 +119,7 @@ export default function ProgramsSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>);
 

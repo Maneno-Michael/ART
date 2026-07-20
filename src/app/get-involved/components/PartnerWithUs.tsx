@@ -5,10 +5,10 @@ import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
 const partnerTypes = [
-  { icon: 'BuildingOfficeIcon', label: 'Donors & Foundations', desc: 'Fund community programs and grassroots initiatives.' },
-  { icon: 'GlobeAltIcon', label: 'International NGOs', desc: 'Collaborate on joint programming and technical exchange.' },
-  { icon: 'HomeModernIcon', label: 'Grassroots Organizations', desc: 'Co-design and implement community-led solutions.' },
-  { icon: 'AcademicCapIcon', label: 'Academic Institutions', desc: 'Research, documentation, and knowledge partnerships.' },
+  { icon: 'BuildingOfficeIcon', label: 'Corporate Partnership', desc: 'Partner with African Roots Transformation (ART) as part of your CSR programme and lets work together to achieve your objectives while creating lasting impact for communities.' },
+  { icon: 'GlobeAltIcon', label: 'Spread the Word', desc: 'Share African Roots Transformation (ART) story on social media, in your church, community group or workplace. Every share reaches potential supporters who can transform lives in Africa.' },
+  { icon: 'HomeModernIcon', label: 'Legacy Giving', desc: 'Consider leaving a gift to African Roots Transformation (ART) in your will. Legacy gifts help us plan long-term training programmes and community infrastructure that will outlast any of us.' },
+  { icon: 'AcademicCapIcon', label: 'In-Kind Support', desc: 'Donate facilities/properties, composting equipment, Value addition machines, solar panels or agricultural inputs that support the farmers and women’s empowerment programmes directly, sanitary pads for school girls, etc' },
 ];
 
 export default function PartnerWithUs() {
@@ -52,21 +52,21 @@ export default function PartnerWithUs() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {partnerTypes.map((type) => (
-                <div key={type.label} className="flex items-start gap-3 p-4 bg-muted rounded-xl border border-border">
+                <div key={type.label} className="flex items-start gap-3 p-4 bg-primary rounded-xl border border-border">
                   <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Icon name={type.icon as Parameters<typeof Icon>[0]['name']} size={16} className="text-primary" />
+                    <Icon name={type.icon as Parameters<typeof Icon>[0]['name']} size={16} className="text-accent" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">{type.label}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{type.desc}</p>
+                    <p className="text-sm font-semibold text-accent">{type.label}</p>
+                    <p className="text-xs text-primary-foreground mt-0.5">{type.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="mailto:info@africanrootstransformation.org" className="btn-primary">
-                Partner With ART →
+              <a href="/donate" className="btn-primary">
+                Donate to ART →
               </a>
               <a href="#" className="btn-secondary">
                 Contact Our Team

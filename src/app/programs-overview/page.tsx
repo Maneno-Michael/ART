@@ -15,7 +15,7 @@ export default function ProgramsOverviewPage() {
       <main>
         <ProgramsHero />
         <ProgramsGrid />
-        <ProgramsApproach />
+        {/* <ProgramsApproach /> */}
         <ProgramsCTA />
       </main>
       <Footer />

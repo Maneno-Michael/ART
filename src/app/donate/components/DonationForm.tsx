@@ -6,13 +6,16 @@ import Icon from '@/components/ui/AppIcon';
 type DonationType = 'one-time' | 'monthly';
 type PaymentMethod = 'mpesa' | 'card' | 'paypal' | 'bank';
 
-const presetAmounts = [30, 100, 150, 250];
+const presetAmounts = [30, 50, 100, 300, 500, 1000, 5000];
 
 const donationImpact: Record<number, string> = {
-  30: 'Provides indigenous seeds and basic farming tools for one farmer.',
-  100: 'Supports community dialogue and advocacy activities focused on women\'s land rights and food security.',
-  150: 'Supports youth agroecology mentorship initiatives for climate resilience and community learning.',
-  250: 'Supports demonstration plots and community learning activities at a resilience site.',
+  30: 'Provides indigenous seeds and basic farming tools for one smallholder farmer.',
+  50: 'Training materials and composting supplies for 2 smallholder farmers',
+  100: 'Supports one community dialogue and advocacy activities focused on womens land rights and food sovereignty reaching 20+ women',
+  300: 'Funds one youth Agroecology mentorship initiative for climate resilience and community learning reaching 30+ youths. ',
+  500: 'Sponsors a full  establishment of a school demo farm where students can practically learn agroecological practices',
+  1000: 'Establishes a community Resilience Centre serving 50+ farming households',
+  5000: 'Funds a full ART programme year:eg, ART Green Schools, Voices from the Roots, My food, my power campaign, Her Land; Her Power.',
 };
 
 const paymentMethods: { id: PaymentMethod; label: string; icon: string; description: string }[] = [

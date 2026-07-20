@@ -13,9 +13,9 @@ const projects = [
   image: "/assets/images/macha.jpg",
   imageAlt: 'Machakos Resilience Hub — community and field activity in Machakos County, Kenya',
   tags: ["Women\'s Rights", 'Food Security', 'Advocacy'],
-  stats: [
-  { value: '200+', label: 'Farmers Engaged' },
-  { value: '3', label: 'Learning Sites' }]
+  // stats: [
+  // { value: '200+', label: 'Farmers Engaged' },
+  // { value: '3', label: 'Learning Sites' }]
 
 },
 {
@@ -25,9 +25,9 @@ const projects = [
   image: "/assets/images/nairobi.jpg",
   imageAlt: 'Utawala Urban Farm — women-led urban agroecological farming in Nairobi, soil restoration and indigenous crops',
   tags: ['Urban Farming', 'Women-Led', 'Agroecology'],
-  stats: [
-  { value: '50+', label: 'Women Trained' },
-  { value: '2', label: 'Demo Plots' }]
+  // stats: [
+  // { value: '50+', label: 'Women Trained' },
+  // { value: '2', label: 'Demo Plots' }]
 
 }];
 
@@ -104,14 +104,14 @@ export default function ActiveProjectsSection() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">{project?.description}</p>
 
                 {/* Stats */}
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
+                {/* <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
                   {project?.stats?.map((stat) =>
                 <div key={stat?.label} className="text-center">
                       <div className="font-display font-bold text-2xl text-primary">{stat?.value}</div>
                       <div className="text-xs text-muted-foreground">{stat?.label}</div>
                     </div>
                 )}
-                </div>
+                </div> */}
               </div>
             </div>
           )}

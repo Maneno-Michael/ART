@@ -64,7 +64,7 @@ export default function Footer() {
     <footer className="bg-footer-bg text-primary-foreground" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-8">
         {/* Main grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-primary-foreground/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-6 border-b border-primary-foreground/10">
           {/* Col 1 — About */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -84,6 +84,13 @@ export default function Footer() {
             <p className="text-primary-foreground/40 text-xs font-mono">
             RE_No.: CLG-87TKRADA
             </p>
+
+            <div className="text-primary-foreground/40 text-xs mt-4">
+            <p> P. O box 72950-00200, Ojijo Road- Westpark Suits, Nairobi Kenya </p>
+            <p>Email: info@africanrootstransformation.org</p>
+            <p>Call Us: +254797463939 </p>
+          </div>
+
             {/* Social icons */}
             <div className="flex gap-3 mt-5">
               {socialLinks.map(({ label, href, path }) => (
@@ -191,14 +198,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 text-xs text-primary-foreground/40">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-3 text-xs text-primary-foreground/40">
           <p>© 2026 African Roots Transformation (ART). All Rights Reserved.</p>
-          <div>
-            <p> P. O box 72950-00200, Ojijo Road- Westpark Suits, Nairobi Kenya </p>
-            <p>Email: info@africanrootstransformation.org</p>
-            <p>Call Us: +254797463939 </p>
-          </div>
-          <div className="flex gap-6">
+            <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-primary-foreground/70 transition-colors focus-ring">
               Privacy Policy
             </Link>
