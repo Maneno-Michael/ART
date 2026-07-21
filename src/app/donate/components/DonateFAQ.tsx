@@ -43,42 +43,51 @@ export default function DonateFAQ() {
   return (
     <section
       ref={ref}
-      className="py-16 sm:py-20 bg-background"
+      className="py-10 sm:py-16 lg:py-20 bg-background"
       aria-labelledby="faq-heading"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        <div className={`text-center mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className="section-label text-accent mb-3 block">Common Questions</span>
+        <div className={`text-center mb-8 sm:mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <span className="text-xs sm:text-sm section-label text-accent mb-2 sm:mb-3 block">
+            Common Questions
+          </span>
           <h2
             id="faq-heading"
-            className="font-display text-3xl sm:text-4xl text-foreground"
+            className="font-display text-2xl sm:text-3xl lg:text-4xl text-foreground"
           >
             Frequently Asked Questions
           </h2>
         </div>
 
         <div
-          className={`space-y-3 transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`space-y-2.5 sm:space-y-3 transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           role="list"
         >
           {faqs?.map((faq, i) => (
             <div
               key={i}
-              className={`bg-card border rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === i ? 'border-primary/30 shadow-md' : 'border-border hover:border-primary/20 hover:shadow-sm'}`}
+              className={`bg-card border rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === i ? 'border-primary/30 shadow-md' : 'border-border hover:border-primary/20 hover:shadow-sm'}`}
               role="listitem"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left focus-ring"
+                className="w-full flex items-center justify-between gap-3 sm:gap-4 px-4 py-4 sm:px-6 sm:py-5 text-left focus-ring"
                 aria-expanded={openIndex === i}
                 aria-controls={`faq-answer-${i}`}
                 id={`faq-question-${i}`}
               >
-                <span className="font-semibold text-foreground text-sm sm:text-base">{faq?.question}</span>
+                <span className="font-semibold text-foreground text-xs sm:text-sm lg:text-base">
+                  {faq?.question}
+                </span>
+                <Icon
+                  name="ChevronDownIcon"
+                  size={16}
+                  className={`text-muted-foreground flex-shrink-0 transition-transform duration-300 sm:hidden ${openIndex === i ? 'rotate-180 text-primary' : ''}`}
+                />
                 <Icon
                   name="ChevronDownIcon"
                   size={18}
-                  className={`text-muted-foreground flex-shrink-0 transition-transform duration-300 ${openIndex === i ? 'rotate-180 text-primary' : ''}`}
+                  className={`text-muted-foreground flex-shrink-0 transition-transform duration-300 hidden sm:block ${openIndex === i ? 'rotate-180 text-primary' : ''}`}
                 />
               </button>
 
@@ -88,8 +97,10 @@ export default function DonateFAQ() {
                 aria-labelledby={`faq-question-${i}`}
                 className={`overflow-hidden transition-all duration-300 ${openIndex === i ? 'max-h-64' : 'max-h-0'}`}
               >
-                <div className="px-6 pb-5 pt-0 border-t border-dashed border-border">
-                  <p className="text-muted-foreground text-sm leading-relaxed pt-4">{faq?.answer}</p>
+                <div className="px-4 pb-4 pt-0 sm:px-6 sm:pb-5 border-t border-dashed border-border">
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed pt-3 sm:pt-4">
+                    {faq?.answer}
+                  </p>
                 </div>
               </div>
             </div>
