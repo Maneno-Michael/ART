@@ -57,7 +57,7 @@ export default function FinalCTASection() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/get-involved"
-              className="btn-shimmer inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-full text-base font-semibold hover:bg-accent/90 transition-all shadow-xl focus-ring">
+              className="btn-shimmer inline-flex items-center text-xs sm:text-sm gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold hover:bg-accent/90 transition-all shadow-xl focus-ring">
 
               Get Involved
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -66,7 +66,7 @@ export default function FinalCTASection() {
             </Link>
             <Link
               href="/donate"
-              className="inline-flex items-center gap-2 border-2 border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-full text-base font-semibold hover:bg-primary-foreground/10 transition-all focus-ring">
+              className="inline-flex items-center gap-2 border-2 border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-full text-xs sm:text-sm font-semibold hover:bg-primary-foreground/10 transition-all focus-ring">
 
               Donate Now
             </Link>

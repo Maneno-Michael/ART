@@ -34,7 +34,7 @@ export default function WhyItMattersSection() {
               Communities Closest to the Challenges Must Be Central to the{' '}
               <span className="italic text-primary">Solutions</span>
             </h2>
-            <div className="space-y-4 sm:space-y-5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <div className="space-y-4 sm:space-y-5 text-muted-foreground text-xs sm:text-sm leading-relaxed">
               <p>
                 Across Africa, many farming communities are facing soil degradation, climate shocks, rising production costs, shrinking land access, and limited participation in decisions that directly affect their livelihoods.
               </p>
