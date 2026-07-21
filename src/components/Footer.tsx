@@ -76,7 +76,7 @@ export default function Footer() {
           </span>
             </div>
             <p className="text-primary-foreground/90 text-sm leading-relaxed mb-4 italic font-display">
-              &ldquo;Nurturing Communities. Transforming Lives. Sustaining Futures.&rdquo;
+              &ldquo;Nurturing Communities. Transforming Lives.&rdquo;
             </p>
             <p className="text-primary-foreground/55 text-sm leading-relaxed mb-5">
               African Roots Transformation (ART) is a Kenya-based nonprofit advancing agroecology, community resilience, food sovereignty, and social justice through locally led solutions across Africa.
