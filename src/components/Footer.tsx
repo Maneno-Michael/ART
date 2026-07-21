@@ -61,39 +61,38 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-footer-bg text-primary-foreground" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-8">
+    <footer className="bg-footer-bg text-primary-foreground overflow-hidden" role="contentinfo">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-6 sm:pb-8">
         {/* Main grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-6 border-b border-primary-foreground/10">
-          {/* Col 1 — About */}
-          <div className="sm:col-span-2 lg:col-span-1">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 sm:gap-10 pb-6 border-b border-primary-foreground/10">
+          {/* Col 1 — About (full width on mobile/tablet, 1 col on lg) */}
+          <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <AppLogo size={80} />
-             <span className="font-serif text-md md:text-lg tracking-tight">
-            <span className="text-accent">African</span>{' '}
-            <span className="text-accent">Roots</span>{' '}
-            <span className="text-primary-dark">Transformation</span>
+              <AppLogo size={64} />
+              <span className="font-serif text-sm sm:text-md md:text-lg tracking-tight">
+                <span className="text-accent">African</span>{' '}
+                <span className="text-accent">Roots</span>{' '}
+                <span className="text-primary-dark">Transformation</span>
+              </span>
+            </div>
             <p className="text-primary-foreground/90 text-sm leading-relaxed mb-4 italic font-display">
               &ldquo;Nurturing Communities. Transforming Lives.&rdquo;
             </p>
-          </span>
-            </div>
-            
             <p className="text-primary-foreground/55 text-xs sm:text-sm leading-relaxed mb-5">
               African Roots Transformation (ART) is a Kenya-based nonprofit advancing agroecology, community resilience, food sovereignty, and social justice through locally led solutions across Africa.
             </p>
-            <p className="text-primary-foreground/40 text-xs font-mono">
-            RE_No.: CLG-87TKRADA
+            <p className="text-primary-foreground/40 text-xs font-mono break-words">
+              RE_No.: CLG-87TKRADA
             </p>
 
-            <div className="text-primary-foreground/40 text-xs mt-4">
-            <p> P. O box 72950-00200, Ojijo Road- Westpark Suits, Nairobi Kenya </p>
-            <p>Email: info@africanrootstransformation.org</p>
-            <p>Call Us: +254797463939 </p>
-          </div>
+            <div className="text-primary-foreground/40 text-xs mt-4 space-y-1">
+              <p className="break-words"> P. O box 72950-00200, Ojijo Road- Westpark Suits, Nairobi Kenya </p>
+              <p className="break-all">Email: info@africanrootstransformation.org</p>
+              <p>Call Us: +254797463939 </p>
+            </div>
 
             {/* Social icons */}
-            <div className="flex gap-3 mt-5">
+            <div className="flex flex-wrap gap-2.5 sm:gap-3 mt-5">
               {socialLinks.map(({ label, href, path }) => (
                 <a
                   key={label}
@@ -101,12 +100,12 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-accent/50 transition-colors focus-ring"
+                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 hover:border-accent/50 transition-colors focus-ring flex-shrink-0"
                 >
                   <svg
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="w-4 h-4 text-primary-foreground/60"
+                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-foreground/60"
                     aria-hidden="true"
                   >
                     <path d={path} />
@@ -116,12 +115,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2 — Quick Links */}
-          <div>
-            <h3 className="text-accent font-semibold text-xs uppercase tracking-widest mb-5">
+          {/* Col 2 — Quick Links (side by side with Programs on mobile) */}
+          <div className="col-span-1">
+            <h3 className="text-accent font-semibold text-xs uppercase tracking-widest mb-4 sm:mb-5">
               Quick Links
             </h3>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-2.5 sm:gap-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -135,12 +134,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 — Programs */}
-          <div>
-            <h3 className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-5">
+          {/* Col 3 — Programs (side by side with Quick Links on mobile) */}
+          <div className="col-span-1">
+            <h3 className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-4 sm:mb-5">
               Programs
             </h3>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-2.5 sm:gap-3">
               {programLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -154,12 +153,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Newsletter */}
-          <div>
-            <h3 className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-5">
+          {/* Col 4 — Newsletter (full width on mobile/tablet, 1 col on lg) */}
+          <div className="col-span-2 lg:col-span-1">
+            <h3 className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-4 sm:mb-5">
               Stay Connected
             </h3>
-            <p className="text-primary-foreground/60 text-xs sm:text-sm leading-relaxed mb-5">
+            <p className="text-primary-foreground/60 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5">
               Receive updates, webinar invitations, grassroots stories, and learning resources from ART.
             </p>
             {subscribed ? (
@@ -199,9 +198,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-3 text-xs text-primary-foreground/40">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 sm:pt-3 text-xs text-primary-foreground/40 text-center sm:text-left">
           <p>© 2026 African Roots Transformation (ART). All Rights Reserved.</p>
-            <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 sm:gap-6">
             <Link href="/privacy" className="hover:text-primary-foreground/70 transition-colors focus-ring">
               Privacy Policy
             </Link>
