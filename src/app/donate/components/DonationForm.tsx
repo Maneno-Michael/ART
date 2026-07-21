@@ -60,15 +60,15 @@ export default function DonationForm() {
 
   if (submitted) {
     return (
-      <section className="py-16 sm:py-20 bg-background" aria-label="Donation confirmation">
+      <section className="py-14 sm:py-20 bg-background" aria-label="Donation confirmation">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-          <div className="bg-card border border-border rounded-3xl p-10 shadow-xl">
-            <div className="text-5xl mb-5" aria-hidden="true">🌱</div>
-            <h2 className="font-display text-3xl text-foreground mb-4">Thank You for Your Support!</h2>
-            <p className="text-muted-foreground text-base leading-relaxed mb-6">
+          <div className="bg-card border border-border rounded-2xl sm:rounded-3xl p-6 sm:p-10 shadow-xl">
+            <div className="text-4xl sm:text-5xl mb-4 sm:mb-5" aria-hidden="true">🌱</div>
+            <h2 className="font-display text-2xl sm:text-3xl text-foreground mb-3 sm:mb-4">Thank You for Your Support!</h2>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-5 sm:mb-6">
               Your contribution of <strong className="text-primary">${totalAmount.toFixed(2)}</strong> helps strengthen grassroots communities across Africa. You will receive a confirmation email shortly.
             </p>
-            <p className="text-muted-foreground text-sm italic">
+            <p className="text-muted-foreground text-xs sm:text-sm italic">
               *Payment processing integration coming soon. ART will contact you directly to complete your donation.
             </p>
           </div>
@@ -78,30 +78,30 @@ export default function DonationForm() {
   }
 
   return (
-    <section className="py-16 sm:py-20 bg-background" aria-labelledby="donation-form-heading">
+    <section className="py-10 sm:py-20 bg-background" aria-labelledby="donation-form-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-6 sm:gap-8 items-start">
           {/* ── Left: Donation Form ── */}
-          <div className="bg-card border border-border rounded-md shadow-2xl overflow-hidden">
+          <div className="bg-card border border-border rounded-xl sm:rounded-md shadow-2xl overflow-hidden">
             {/* Header */}
-            <div className="bg-primary px-8 py-6">
-              <h2 id="donation-form-heading" className="font-display text-2xl text-primary-foreground mb-1">
+            <div className="bg-primary px-5 sm:px-8 py-5 sm:py-6">
+              <h2 id="donation-form-heading" className="font-display text-xl sm:text-2xl text-primary-foreground mb-1">
                 Make a Donation
               </h2>
-              <p className="text-primary-foreground/70 text-sm">
+              <p className="text-primary-foreground/70 text-xs sm:text-sm">
                 100% of your contribution supports community programs
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="p-6 sm:p-8" noValidate>
+            <form onSubmit={handleSubmit} className="p-4 sm:p-8" noValidate>
               {/* Donation type toggle */}
-              <div className="flex rounded-md overflow-hidden border border-border mb-8" role="group" aria-label="Donation frequency">
+              <div className="flex rounded-md overflow-hidden border border-border mb-6 sm:mb-8" role="group" aria-label="Donation frequency">
                 {(['one-time', 'monthly'] as DonationType[]).map((type) => (
                   <button
                     key={type}
                     type="button"
                     onClick={() => setDonationType(type)}
-                    className={`flex-1 py-3 text-sm font-semibold transition-all focus-ring ${
+                    className={`flex-1 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold transition-all focus-ring ${
                       donationType === type
                         ? 'bg-primary text-primary-foreground'
                         : 'bg-card text-muted-foreground hover:bg-primary/5'
@@ -114,15 +114,15 @@ export default function DonationForm() {
               </div>
 
               {/* Preset amounts */}
-              <fieldset className="mb-6">
+              <fieldset className="mb-5 sm:mb-6">
                 <legend className="text-sm font-semibold text-foreground mb-3">Select Amount (USD)</legend>
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-4 gap-2 sm:gap-3">
                   {presetAmounts.map((amount) => (
                     <button
                       key={amount}
                       type="button"
                       onClick={() => { setSelectedAmount(amount); setCustomAmount(''); }}
-                      className={`py-3 rounded-md text-base font-display font-bold transition-all border-2 focus-ring ${
+                      className={`py-2.5 sm:py-3 rounded-md text-sm sm:text-base font-display font-bold transition-all border-2 focus-ring ${
                         selectedAmount === amount && !customAmount
                           ? 'bg-primary text-primary-foreground border-primary'
                           : 'bg-card text-foreground border-border hover:border-primary/40'
@@ -144,7 +144,7 @@ export default function DonationForm() {
               </fieldset>
 
               {/* Custom amount */}
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <label htmlFor="custom-amount" className="text-sm font-semibold text-foreground mb-2 block">
                   Or Enter Custom Amount
                 </label>
@@ -158,44 +158,44 @@ export default function DonationForm() {
                     placeholder="Enter amount"
                     value={customAmount}
                     onChange={(e) => { setCustomAmount(e.target.value); setSelectedAmount(null); }}
-                    className="w-full pl-8 pr-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted focus:outline-none focus:border-primary transition-colors"
+                    className="w-full pl-8 pr-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted focus:outline-none focus:border-primary transition-colors text-sm sm:text-base"
                     aria-label="Custom donation amount in USD"
                   />
                 </div>
               </div>
 
               {/* Payment method */}
-              <fieldset className="mb-8">
+              <fieldset className="mb-6 sm:mb-8">
                 <legend className="text-sm font-semibold text-foreground mb-3">Payment Method</legend>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
                   {paymentMethods.map((method) => (
                     <button
                       key={method.id}
                       type="button"
                       onClick={() => setPaymentMethod(method.id)}
-                      className={`p-4 rounded-lg border-2 text-center transition-all focus-ring ${
+                      className={`p-3 sm:p-4 rounded-lg border-2 text-center transition-all focus-ring ${
                         paymentMethod === method.id
                           ? 'border-primary bg-primary/5' :'border-border hover:border-primary/30'
                       }`}
                       aria-pressed={paymentMethod === method.id}
                     >
-                      <div className="text-2xl mb-1" aria-hidden="true">{method.icon}</div>
+                      <div className="text-xl sm:text-2xl mb-1" aria-hidden="true">{method.icon}</div>
                       <div className="font-semibold text-foreground text-xs">{method.label}</div>
-                      <div className="text-muted-foreground text-xs mt-0.5">{method.description}</div>
+                      <div className="text-muted-foreground text-[10px] sm:text-xs mt-0.5 leading-snug">{method.description}</div>
                     </button>
                   ))}
                 </div>
                 {/* TODO: Render payment-specific UI based on selected method */}
-                <p className="text-xs text-muted-foreground mt-3 italic">
+                <p className="text-[11px] sm:text-xs text-muted-foreground mt-3 italic">
                   * Payment processing is configured with {paymentMethod === 'mpesa' ? 'Safaricom Daraja API' : paymentMethod === 'card' ? 'Stripe' : paymentMethod === 'paypal' ? 'PayPal SDK' : 'bank transfer details'}.
                 </p>
               </fieldset>
 
               {/* Additional options */}
-              <div className="space-y-4 mb-8 pb-8 border-b border-border">
+              <div className="space-y-4 mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-border">
                 {/* Cover fees */}
                 <label className="flex items-start gap-3 cursor-pointer group">
-                  <div className="relative mt-0.5">
+                  <div className="relative mt-0.5 shrink-0">
                     <input
                       type="checkbox"
                       checked={coverFees}
@@ -208,7 +208,7 @@ export default function DonationForm() {
                     </div>
                   </div>
                   <div>
-                    <span className="text-sm font-medium text-foreground">Cover transaction fees</span>
+                    <span className="text-xs sm:text-sm font-medium text-foreground">Cover transaction fees</span>
                     {effectiveAmount && effectiveAmount > 0 && (
                       <span className="text-xs text-muted-foreground ml-2">(+${feeAmount.toFixed(2)})</span>
                     )}
@@ -218,7 +218,7 @@ export default function DonationForm() {
 
                 {/* In honor */}
                 <label className="flex items-start gap-3 cursor-pointer group">
-                  <div className="relative mt-0.5">
+                  <div className="relative mt-0.5 shrink-0">
                     <input
                       type="checkbox"
                       checked={inHonor}
@@ -230,7 +230,7 @@ export default function DonationForm() {
                       {inHonor && <Icon name="CheckIcon" size={12} className="text-primary-foreground" />}
                     </div>
                   </div>
-                  <span className="text-sm font-medium text-foreground">Donate in honor or memory of someone</span>
+                  <span className="text-xs sm:text-sm font-medium text-foreground">Donate in honor or memory of someone</span>
                 </label>
 
                 {inHonor && (
@@ -249,13 +249,13 @@ export default function DonationForm() {
 
               {/* Total */}
               {effectiveAmount && effectiveAmount > 0 && (
-                <div className="flex justify-between items-center mb-6 bg-primary/5 rounded-md px-5 py-4">
-                  <span className="font-semibold text-foreground">
+                <div className="flex justify-between items-center mb-5 sm:mb-6 bg-primary/5 rounded-md px-4 sm:px-5 py-3.5 sm:py-4 gap-2">
+                  <span className="font-semibold text-foreground text-sm sm:text-base">
                     {donationType === 'monthly' ? 'Monthly Total' : 'Donation Total'}
                   </span>
-                  <span className="font-display font-bold text-2xl text-primary">
+                  <span className="font-display font-bold text-xl sm:text-2xl text-primary whitespace-nowrap">
                     ${totalAmount.toFixed(2)}
-                    {donationType === 'monthly' && <span className="text-sm font-sans font-normal text-muted-foreground">/mo</span>}
+                    {donationType === 'monthly' && <span className="text-xs sm:text-sm font-sans font-normal text-muted-foreground">/mo</span>}
                   </span>
                 </div>
               )}
@@ -264,7 +264,7 @@ export default function DonationForm() {
               <button
                 type="submit"
                 disabled={!effectiveAmount || effectiveAmount <= 0 || loading}
-                className="btn-shimmer w-full bg-accent text-accent-foreground py-4 rounded-md font-semibold text-base hover:bg-accent/90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed focus-ring flex items-center justify-center gap-2"
+                className="btn-shimmer w-full bg-accent text-accent-foreground py-3.5 sm:py-4 rounded-md font-semibold text-sm sm:text-base hover:bg-accent/90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed focus-ring flex items-center justify-center gap-2"
                 aria-busy={loading}
               >
                 {loading ? (
@@ -282,7 +282,7 @@ export default function DonationForm() {
                 )}
               </button>
 
-              <p className="text-center text-xs text-muted-foreground mt-4 flex items-center justify-center gap-1.5">
+              <p className="text-center text-[11px] sm:text-xs text-muted-foreground mt-4 flex items-center justify-center gap-1.5">
                 <Icon name="LockClosedIcon" size={12} />
                 Secure donation · ART Reg: CLG-87TKRADA
               </p>
@@ -290,26 +290,25 @@ export default function DonationForm() {
           </div>
 
           {/* ── Right: Impact Sidebar ── */}
-          <aside className="space-y-5" aria-label="Donation impact information">
+          <aside className="space-y-4 sm:space-y-5" aria-label="Donation impact information">
             {/* Impact story */}
-            <div className="bg-primary text-primary-foreground rounded-xl p-6">
-              <h2 className="font-display text-lg font-semibold mb-3">Your Support in Action</h2>
+            <div className="bg-primary text-primary-foreground rounded-xl p-5 sm:p-6">
+              <h2 className="font-display text-base sm:text-lg font-semibold mb-3">Your Support in Action</h2>
               <h2
-            id="impact-cards-heading"
-            className="font-display text-3xl text-accent sm:text-4xl"
-          >
-            How Donations Help
-          </h2>
-
+                id="impact-cards-heading"
+                className="font-display text-2xl sm:text-3xl md:text-4xl text-accent"
+              >
+                How Donations Help
+              </h2>
             </div>
 
             {/* What your gift does */}
-            <div className="bg-card border border-border rounded-xl shadow-lg p-6">
-              <h2 className="font-display text-base font-bold text-foreground mb-4">What your gift does</h2>
-              <ul className="space-y-3 list-none">
+            <div className="bg-card border border-border rounded-xl shadow-lg p-5 sm:p-6">
+              <h2 className="font-display text-sm sm:text-base font-bold text-foreground mb-3 sm:mb-4">What your gift does</h2>
+              <ul className="space-y-2.5 sm:space-y-3 list-none">
                 {Object.entries(donationImpact).map(([amt, impact]) => (
-                  <li key={amt} className="flex gap-3 items-start text-sm">
-                    <span className="font-bold text-accent shrink-0 mt-0.5">${amt}</span>
+                  <li key={amt} className="flex gap-2.5 sm:gap-3 items-start text-sm">
+                    <span className="font-bold text-accent shrink-0 mt-0.5 text-xs sm:text-sm">${amt}</span>
                     <span className="text-muted-foreground text-xs">{impact}</span>
                   </li>
                 ))}
@@ -317,27 +316,27 @@ export default function DonationForm() {
             </div>
 
             {/* Trust signals */}
-            <div className="bg-background border border-border rounded-xl p-5">
+            <div className="bg-background border border-border rounded-xl p-4 sm:p-5">
               <h2 className="font-semibold text-sm text-foreground mb-3">Why give to ART?</h2>
               <ul className="space-y-2 list-none text-xs text-muted-foreground">
                 <li className="flex gap-2 items-start">
-                  <span className="text-primary mt-0.5" aria-hidden="true">✓</span>
+                  <span className="text-primary mt-0.5 shrink-0" aria-hidden="true">✓</span>
                   100% of net donations go directly to programs
                 </li>
                 <li className="flex gap-2 items-start">
-                  <span className="text-primary mt-0.5" aria-hidden="true">✓</span>
+                  <span className="text-primary mt-0.5 shrink-0" aria-hidden="true">✓</span>
                   Registered nonprofit — Reg. CLG-87TKRADA
                 </li>
                 <li className="flex gap-2 items-start">
-                  <span className="text-primary mt-0.5" aria-hidden="true">✓</span>
+                  <span className="text-primary mt-0.5 shrink-0" aria-hidden="true">✓</span>
                   Secure SSL payment processing
                 </li>
                 <li className="flex gap-2 items-start">
-                  <span className="text-primary mt-0.5" aria-hidden="true">✓</span>
+                  <span className="text-primary mt-0.5 shrink-0" aria-hidden="true">✓</span>
                   Tax receipt emailed immediately
                 </li>
                 <li className="flex gap-2 items-start">
-                  <span className="text-primary mt-0.5" aria-hidden="true">✓</span>
+                  <span className="text-primary mt-0.5 shrink-0" aria-hidden="true">✓</span>
                   Cancel monthly giving anytime
                 </li>
               </ul>
@@ -350,7 +349,7 @@ export default function DonationForm() {
             </div>
 
             {/* Payment security badges */}
-            <div className="flex items-center justify-center gap-4 py-3 px-4 bg-card border border-border rounded-xl">
+            <div className="flex items-center justify-center flex-wrap gap-3 sm:gap-4 py-3 px-4 bg-card border border-border rounded-xl">
               <span className="text-xs text-muted">Secured by</span>
               <span className="font-bold text-sm text-muted-foreground">Stripe</span>
               <span className="text-border" aria-hidden="true">|</span>
