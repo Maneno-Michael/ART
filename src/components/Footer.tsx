@@ -73,12 +73,13 @@ export default function Footer() {
             <span className="text-accent">African</span>{' '}
             <span className="text-accent">Roots</span>{' '}
             <span className="text-primary-dark">Transformation</span>
-          </span>
-            </div>
             <p className="text-primary-foreground/90 text-sm leading-relaxed mb-4 italic font-display">
               &ldquo;Nurturing Communities. Transforming Lives.&rdquo;
             </p>
-            <p className="text-primary-foreground/55 text-sm leading-relaxed mb-5">
+          </span>
+            </div>
+            
+            <p className="text-primary-foreground/55 text-xs sm:text-sm leading-relaxed mb-5">
               African Roots Transformation (ART) is a Kenya-based nonprofit advancing agroecology, community resilience, food sovereignty, and social justice through locally led solutions across Africa.
             </p>
             <p className="text-primary-foreground/40 text-xs font-mono">
@@ -117,7 +118,7 @@ export default function Footer() {
 
           {/* Col 2 — Quick Links */}
           <div>
-            <h3 className="text-accent font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="text-accent font-semibold text-xs uppercase tracking-widest mb-5">
               Quick Links
             </h3>
             <ul className="flex flex-col gap-3">
@@ -125,7 +126,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors focus-ring"
+                    className="text-primary-foreground/60 hover:text-primary-foreground text-xs sm:text-sm transition-colors focus-ring"
                   >
                     {link.label}
                   </Link>
@@ -136,7 +137,7 @@ export default function Footer() {
 
           {/* Col 3 — Programs */}
           <div>
-            <h3 className="text-accent font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-5">
               Programs
             </h3>
             <ul className="flex flex-col gap-3">
@@ -144,7 +145,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors focus-ring"
+                    className="text-primary-foreground/60 hover:text-primary-foreground text-xs sm:text-sm transition-colors focus-ring"
                   >
                     {link.label}
                   </Link>
@@ -155,10 +156,10 @@ export default function Footer() {
 
           {/* Col 4 — Newsletter */}
           <div>
-            <h3 className="text-accent font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-5">
               Stay Connected
             </h3>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-5">
+            <p className="text-primary-foreground/60 text-xs sm:text-sm leading-relaxed mb-5">
               Receive updates, webinar invitations, grassroots stories, and learning resources from ART.
             </p>
             {subscribed ? (
@@ -174,7 +175,7 @@ export default function Footer() {
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   required
-                  className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-lg px-4 py-2.5 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent transition-colors"
+                  className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-lg px-4 py-2.5 text-xs sm:text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent transition-colors"
                   aria-label="First name"
                 />
                 <input
@@ -183,12 +184,12 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-lg px-4 py-2.5 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent transition-colors"
+                  className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-lg px-4 py-2.5 text-xs sm:text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-accent transition-colors"
                   aria-label="Email address"
                 />
                 <button
                   type="submit"
-                  className="btn-shimmer w-full bg-accent text-accent-foreground py-2.5 rounded-lg text-sm font-semibold hover:bg-accent/90 transition-all focus-ring"
+                  className="btn-shimmer w-full bg-accent text-accent-foreground py-2.5 rounded-lg text-xs sm:text-sm font-semibold hover:bg-accent/90 transition-all focus-ring"
                 >
                   Subscribe →
                 </button>
