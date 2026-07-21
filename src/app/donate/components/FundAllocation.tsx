@@ -32,35 +32,46 @@ export default function FundAllocation() {
   return (
     <section
       ref={ref}
-      className="py-16 sm:py-20 bg-card"
+      className="py-10 sm:py-16 lg:py-20 bg-card"
       aria-labelledby="fund-allocation-heading"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className={`text-center mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className="section-label text-accent mb-3 block">Transparency & Accountability</span>
+        <div className={`text-center mb-8 sm:mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <span className="text-xs sm:text-sm section-label text-accent mb-2 sm:mb-3 block">
+            Transparency & Accountability
+          </span>
           <h2
             id="fund-allocation-heading"
-            className="font-display text-3xl sm:text-4xl text-foreground mb-4"
+            className="font-display text-2xl sm:text-3xl lg:text-4xl text-foreground mb-3 sm:mb-4"
           >
             How Contributions Are Used
           </h2>
-          <p className="text-muted-foreground text-base max-w-xl mx-auto">
+          <p className="text-muted-foreground text-xs sm:text-sm lg:text-base max-w-xl mx-auto">
             ART is committed to transparency. Here is how every donation is allocated across our programs and operations.
           </p>
         </div>
 
-        <div className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Visual bar chart */}
-          <div className="space-y-4" role="list" aria-label="Fund allocation breakdown">
+          <div className="space-y-3 sm:space-y-4" role="list" aria-label="Fund allocation breakdown">
             {allocations?.map((item, i) => (
               <div key={item?.label} role="listitem">
                 <div className="flex justify-between items-center mb-1.5">
-                  <span className="text-sm font-semibold text-foreground">{item?.label}</span>
-                  <span className={`font-display font-bold text-lg ${item?.textColor}`}>{item?.percentage}%</span>
+                  <span className="text-xs sm:text-sm font-semibold text-foreground">{item?.label}</span>
+                  <span className={`font-display font-bold text-base sm:text-lg ${item?.textColor}`}>
+                    {item?.percentage}%
+                  </span>
                 </div>
-                <div className="w-full bg-border rounded-full h-3 overflow-hidden" role="progressbar" aria-valuenow={item?.percentage} aria-valuemin={0} aria-valuemax={100} aria-label={`${item?.label}: ${item?.percentage}%`}>
+                <div
+                  className="w-full bg-border rounded-full h-2.5 sm:h-3 overflow-hidden"
+                  role="progressbar"
+                  aria-valuenow={item?.percentage}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-label={`${item?.label}: ${item?.percentage}%`}
+                >
                   <div
-                    className={`h-3 rounded-full transition-all duration-1000 ease-out ${item?.color}`}
+                    className={`h-2.5 sm:h-3 rounded-full transition-all duration-1000 ease-out ${item?.color}`}
                     style={{
                       width: animated ? `${item?.percentage}%` : '0%',
                       transitionDelay: `${i * 100}ms`,
@@ -73,7 +84,7 @@ export default function FundAllocation() {
 
           {/* Donut chart visual — CSS only */}
           <div className="flex items-center justify-center">
-            <div className="relative w-52 h-52 sm:w-64 sm:h-64" aria-hidden="true">
+            <div className="relative w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64" aria-hidden="true">
               <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
                 {(() => {
                   let cumulative = 0;
@@ -102,18 +113,22 @@ export default function FundAllocation() {
               </svg>
               {/* Center text */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="font-display font-bold text-2xl text-primary">100%</span>
-                <span className="text-xs text-muted-foreground text-center leading-tight">Community<br />Focused</span>
+                <span className="font-display font-bold text-lg sm:text-xl lg:text-2xl text-primary">100%</span>
+                <span className="text-[10px] sm:text-xs text-muted-foreground text-center leading-tight">
+                  Community<br />Focused
+                </span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Registration note */}
-        <div className={`mt-10 text-center transition-all duration-700 delay-400 ${visible ? 'opacity-100' : 'opacity-0'}`}>
-          <p className="text-muted-foreground text-sm">
+        <div className={`mt-8 sm:mt-10 text-center transition-all duration-700 delay-400 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+          <p className="text-muted-foreground text-xs sm:text-sm">
             African Roots Transformation (ART) is a registered nonprofit in Kenya.{' '}
-            <span className="font-mono text-xs bg-border/50 px-2 py-0.5 rounded">CLG-87TKRADA</span>
+            <span className="font-mono text-[10px] sm:text-xs bg-border/50 px-2 py-0.5 rounded inline-block mt-1 sm:mt-0">
+              CLG-87TKRADA
+            </span>
           </p>
         </div>
       </div>
