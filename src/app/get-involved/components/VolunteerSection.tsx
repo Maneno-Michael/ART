@@ -56,37 +56,37 @@ export default function VolunteerSection() {
   };
 
   return (
-    <section ref={sectionRef} id="volunteer-form" className="py-20 bg-primary/5">
+    <section ref={sectionRef} id="volunteer-form" className="py-12 sm:py-16 lg:py-20 bg-primary/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-start">
           {/* Left: Info */}
           <div className="reveal reveal-hidden">
-            <span className="section-label">Volunteer With ART</span>
-            <h2 className="text-section-title font-extrabold text-foreground mt-3 mb-5">
+            <span className="section-label text-xs sm:text-sm">Volunteer With ART</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-section-title font-extrabold text-foreground mt-2 sm:mt-3 mb-4 sm:mb-5">
               Contribute Your Skills and Experience
             </h2>
-            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
               ART welcomes volunteers passionate about community development, agroecology, communications, research, advocacy, digital skills, legal literacy, monitoring and evaluation, storytelling, and grassroots learning.
             </p>
-            <p className="text-base text-muted-foreground leading-relaxed mb-8">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6 sm:mb-8">
               Whether contributing remotely or in person, volunteers help strengthen community initiatives and organizational growth.
             </p>
 
-            <div className="mb-6">
-              <p className="text-sm font-semibold text-foreground mb-3">Volunteer Areas</p>
-              <div className="flex flex-wrap gap-2">
+            <div className="mb-5 sm:mb-6">
+              <p className="text-sm font-semibold text-foreground mb-2.5 sm:mb-3">Volunteer Areas</p>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {volunteerAreas.map((area) => (
-                  <span key={area} className="tag-pill bg-primary/10 text-primary border border-primary/20">
+                  <span key={area} className="tag-pill bg-primary/10 text-primary border border-primary/20 text-[11px] sm:text-xs">
                     {area}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="bg-card rounded-2xl border border-border p-5">
+            <div className="bg-card rounded-2xl border border-border p-4 sm:p-5">
               <div className="flex items-start gap-3">
-                <Icon name="LightBulbIcon" size={20} className="text-secondary shrink-0 mt-0.5" />
-                <div>
+                <Icon name="LightBulbIcon" size={18} className="text-secondary shrink-0 mt-0.5" />
+                <div className="min-w-0">
                   <p className="text-sm font-semibold text-foreground mb-1">Remote & In-Person Options</p>
                   <p className="text-xs text-muted-foreground leading-relaxed">
                     Volunteers can contribute remotely from anywhere in the world or join our team in Kenya for in-person community engagement.
@@ -99,21 +99,21 @@ export default function VolunteerSection() {
           {/* Right: Form */}
           <div className="reveal reveal-hidden">
             {submitted ? (
-              <div className="bg-card rounded-3xl border border-border p-10 text-center shadow-sm">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
-                  <Icon name="CheckCircleIcon" size={28} className="text-primary" />
+              <div className="bg-card rounded-2xl sm:rounded-3xl border border-border p-6 sm:p-10 text-center shadow-sm">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 sm:mb-5">
+                  <Icon name="CheckCircleIcon" size={24} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-extrabold text-foreground mb-3">Thank You for Your Interest!</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                <h3 className="text-lg sm:text-xl font-extrabold text-foreground mb-2.5 sm:mb-3">Thank You for Your Interest!</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 sm:mb-5">
                   We have received your volunteer application. Our team will review it and reach out within 5–7 business days.
                 </p>
-                <button onClick={() => setSubmitted(false)} className="btn-secondary">
+                <button onClick={() => setSubmitted(false)} className="btn-secondary w-full sm:w-auto justify-center">
                   Submit Another Application
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-card rounded-3xl border border-border p-6 sm:p-8 shadow-sm space-y-5">
-                <h3 className="text-lg font-extrabold text-foreground">Volunteer Interest Form</h3>
+              <form onSubmit={handleSubmit} className="bg-card rounded-2xl sm:rounded-3xl border border-border p-4 sm:p-6 lg:p-8 shadow-sm space-y-4 sm:space-y-5">
+                <h3 className="text-base sm:text-lg font-extrabold text-foreground">Volunteer Interest Form</h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
