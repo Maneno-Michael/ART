@@ -7,17 +7,17 @@ import Icon from '@/components/ui/AppIcon';
 
 const quickLinks = [
   { label: 'About Us', href: '/about' },
-  { label: 'Programs', href: '/programs' },
+  { label: 'Programs', href: '/programs-overview' },
   { label: 'Get Involved', href: '/get-involved' },
   { label: 'Donate', href: '/donate' },
 ];
 
 const programLinks = [
-  { label: 'ART Resilience Centers', href: '/programs/art-resilience-centers' },
-  { label: 'My Food, My Power', href: '/programs/my-food-my-power' },
-  { label: 'Her Land, Her Power', href: '/programs/her-land-her-power' },
-  { label: 'ART Green Schools', href: '/programs/art-green-schools' },
-  { label: 'Voices from the Roots', href: '/programs/voices-from-the-roots' },
+  { label: 'ART Resilience Centers', href: '/programs-overview' },
+  { label: 'My Food, My Power', href: '/programs-overview' },
+  { label: 'Her Land, Her Power', href: '/programs-overview' },
+  { label: 'ART Green Schools', href: '/programs-overview' },
+  { label: 'Voices from the Roots', href: '/programs-overview' },
 ];
 
 const socialLinks = [
