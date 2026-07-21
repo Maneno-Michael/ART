@@ -51,7 +51,7 @@ export default function ActiveProjectsSection() {
 
             Where We Are Working
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-muted-foreground text-xs sm:text-sm max-w-2xl leading-relaxed">
             ART currently supports grassroots initiatives and community partnerships focused on agroecology, food sovereignty, women&apos;s empowerment, and climate resilience in Kenya.
           </p>
         </div>

@@ -82,7 +82,7 @@ export default function ProgramsSection() {
 
             Community-Led Programs for Resilient Food Systems
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-muted-foreground text-xs sm:text-sm max-w-2xl leading-relaxed">
             ART develops practical, community-driven programs that strengthen food sovereignty, promote climate resilience, support social justice, and expand opportunities for women and young people.
           </p>
         </div>
