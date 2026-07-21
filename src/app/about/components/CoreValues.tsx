@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useRef, useEffect, useState } from 'react';
@@ -70,22 +69,22 @@ export default function CoreValues() {
     <section
       ref={ref}
       id="programs"
-      className="py-20 sm:py-24 bg-background"
+      className="py-14 sm:py-20 lg:py-24 bg-background overflow-hidden"
       aria-labelledby="programs-heading">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className={`text-center mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className="section-label text-accent mb-3 block">What We Stand For</span>
+        <div className={`text-center mb-10 sm:mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <span className="section-label text-accent mb-2 sm:mb-3 block">What We Stand For</span>
           <h2
             id="values-heading"
-            className="font-display text-3xl sm:text-4xl md:text-5xl text-foreground"
+            className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-foreground px-2"
           >
             The Principles That Guide Our Work
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {/* Cards 1-4: normal span */}
           {programs.slice(0, 4).map((program, i) =>
           <ProgramCard key={program.href} program={program} index={i} visible={visible} />
@@ -113,24 +112,24 @@ interface ProgramCardProps {
 function ProgramCard({ program, index, visible }: ProgramCardProps) {
   return (
     <div
-      className={`group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+      className={`group bg-card border border-border rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       style={{ transitionDelay: `${index * 80}ms` }}>
       
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-40 sm:h-48 overflow-hidden">
         <AppImage
           src={program.image}
           alt={program.imageAlt}
           fill
-          className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+          className="object-cover sm:grayscale sm:group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
         
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        <span className={`absolute top-3 left-3 text-xs font-semibold px-3 py-1 rounded-full ${program.color} backdrop-blur-sm`}>
+        <span className={`absolute top-2.5 left-2.5 sm:top-3 sm:left-3 text-[10px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 rounded-full ${program.color} backdrop-blur-sm`}>
           {program.tag}
         </span>
       </div>
-      <div className="p-6">
-        <h3 className="font-display text-xl font-semibold text-foreground mb-2">{program.title}</h3>
+      <div className="p-4 sm:p-6">
+        <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-2">{program.title}</h3>
         <p className="text-muted-foreground text-sm leading-relaxed mb-4">{program.summary}</p>
         
       </div>
@@ -140,23 +139,23 @@ function ProgramCard({ program, index, visible }: ProgramCardProps) {
 
 function ProgramCardWide({ program }: {program: typeof programs[0];}) {
   return (
-    <div className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500 h-full flex flex-col sm:flex-row">
-      <div className="relative sm:w-2/5 h-48 sm:h-auto overflow-hidden flex-shrink-0">
+    <div className="group bg-card border border-border rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500 h-full flex flex-col sm:flex-row">
+      <div className="relative sm:w-2/5 h-40 sm:h-auto overflow-hidden flex-shrink-0">
         <AppImage
           src={program.image}
           alt={program.imageAlt}
           fill
-          className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+          className="object-cover sm:grayscale sm:group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
           sizes="(max-width: 640px) 100vw, 40vw" />
         
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent sm:bg-gradient-to-l" />
       </div>
-      <div className="p-6 sm:p-8 flex flex-col justify-center flex-1">
-        <span className={`self-start text-xs font-semibold px-3 py-1 rounded-full mb-3 ${program.color}`}>
+      <div className="p-5 sm:p-8 flex flex-col justify-center flex-1">
+        <span className={`self-start text-[10px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 rounded-full mb-2.5 sm:mb-3 ${program.color}`}>
           {program.tag}
         </span>
-        <h3 className="font-display text-2xl font-semibold text-foreground mb-3">{program.title}</h3>
-        <p className="text-muted-foreground text-base leading-relaxed mb-5">{program.summary}</p>
+        <h3 className="font-display text-xl sm:text-2xl font-semibold text-foreground mb-2.5 sm:mb-3">{program.title}</h3>
+        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4 sm:mb-5">{program.summary}</p>
         
       </div>
     </div>);
