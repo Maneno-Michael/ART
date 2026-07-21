@@ -7,28 +7,49 @@ const impactCards = [
   {
     amount: '$30',
     description: 'Provides indigenous seeds and basic farming tools for one smallholder farmer.',
-    emoji: '🌱',
+    // emoji: '🌱',
     color: 'bg-primary/5 border-primary/20 hover:border-primary/40',
     amountColor: 'text-primary',
   },
   {
-    amount: '$100',
-    description: 'Supports a community advocacy and dialogue session focused on women\'s land rights and food security.',
-    emoji: '🤝',
+    amount: '$50',
+    description: 'Provides indigenous seeds and basic farming tools for one smallholder farmer. ',
+    // emoji: '🤝',
     color: 'bg-accent/5 border-accent/20 hover:border-accent/40',
     amountColor: 'text-accent',
   },
   {
-    amount: '$150',
-    description: 'Helps train youth agroecology mentors supporting climate resilience and community learning.',
-    emoji: '👩‍🌾',
+    amount: '$100',
+    description: 'Supports one community dialogue and advocacy activities focused on womens land rights and food sovereignty reaching 20+ women',
+    // emoji: '👩‍🌾',
     color: 'bg-secondary/5 border-secondary/20 hover:border-secondary/40',
     amountColor: 'text-secondary',
   },
   {
-    amount: '$200',
-    description: 'Supports a demonstration plot and soil restoration setup at a community resilience site.',
-    emoji: '🌍',
+    amount: '$300',
+    description: 'Funds one youth Agroecology mentorship initiative for climate resilience and community learning reaching 30+ youths.',
+    // emoji: '🌍',
+    color: 'bg-primary/5 border-primary/20 hover:border-primary/40',
+    amountColor: 'text-primary',
+  },
+    {
+    amount: '$500',
+    description: 'Sponsors a full  establishment of a school demo farm where students can practically learn agroecological practices',
+    // emoji: '🤝',
+    color: 'bg-accent/5 border-accent/20 hover:border-accent/40',
+    amountColor: 'text-accent',
+  },
+  {
+    amount: '$1000',
+    description: 'Establishes a community Resilience Centre serving 50+ farming households.',
+    // emoji: '👩‍🌾',
+    color: 'bg-secondary/5 border-secondary/20 hover:border-secondary/40',
+    amountColor: 'text-secondary',
+  },
+  {
+    amount: '$5000',
+    description: 'Funds a full ART programme year:eg, ART Green Schools, Voices from the Roots, My food, my power campaign, Her Land; Her Power.',
+    // emoji: '🌍',
     color: 'bg-primary/5 border-primary/20 hover:border-primary/40',
     amountColor: 'text-primary',
   },
@@ -84,10 +105,8 @@ export default function DonationImpactSection() {
               <div className="absolute top-1/2 -left-2 w-4 h-4 bg-background rounded-full -translate-y-1/2" aria-hidden="true" />
               <div className="absolute top-1/2 -right-2 w-4 h-4 bg-background rounded-full -translate-y-1/2" aria-hidden="true" />
               {/* Dashed divider */}
-              <div className="border-b-2 border-dashed border-border pb-4 mb-4">
-                <span className="text-3xl" aria-hidden="true">{card?.emoji}</span>
-              </div>
-              <div className={`font-display font-bold text-4xl mb-3 ${card?.amountColor}`}>
+              
+              <div className={`font-display font-bold text-3xl mb-3 ${card?.amountColor}`}>
                 {card?.amount}
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">{card?.description}</p>
