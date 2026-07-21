@@ -19,41 +19,41 @@ export default function AboutFinalCTA() {
   return (
     <section
       ref={ref}
-      className="py-20 sm:py-24 bg-background"
+      className="py-14 sm:py-20 lg:py-24 bg-background overflow-hidden"
       aria-labelledby="about-cta-heading"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <div className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Decorative element */}
-          <div className="flex items-center justify-center gap-4 mb-8" aria-hidden="true">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-border" />
-            <span className="text-2xl">🌱</span>
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-border" />
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8" aria-hidden="true">
+            <div className="h-px w-10 sm:w-16 bg-gradient-to-r from-transparent to-border" />
+            <span className="text-xl sm:text-2xl">🌱</span>
+            <div className="h-px w-10 sm:w-16 bg-gradient-to-l from-transparent to-border" />
           </div>
 
           <h2
             id="about-cta-heading"
-            className="font-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-5"
+            className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 sm:mb-5"
           >
             Join a Growing Movement for Food Sovereignty and{' '}
             <span className="italic text-primary">Community Resilience</span>
           </h2>
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto">
             Whether you are a donor, grassroots organization, researcher, volunteer, or community member, there is a place for you within the ART network.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               href="/get-involved"
-              className="btn-shimmer inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-base font-semibold hover:bg-primary/90 transition-all shadow-xl focus-ring"
+              className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-primary/90 transition-all shadow-xl focus-ring"
             >
               Partner With Us
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
             <Link
               href="/donate"
-              className="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-4 rounded-full text-base font-semibold hover:bg-primary/5 transition-all focus-ring"
+              className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-primary/5 transition-all focus-ring"
             >
               Support Our Work
             </Link>
