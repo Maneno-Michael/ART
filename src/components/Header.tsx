@@ -67,7 +67,7 @@ export default function Header() {
             <span className="text-accent">Roots</span>{' '}
             <span className="text-primary-dark">Transformation</span>
             <p className="text-black text-sm leading-relaxed mb-4 italic font-display">
-              &ldquo;Nurturing Communities. Transforming Lives.&rdquo;
+              &ldquo;Nurturing Communities. Transforming Lives. Sustaining Futures.&rdquo;
             </p>
           </span>
           

@@ -44,14 +44,15 @@ function CounterItem({ stat, triggered }: { stat: Stat; triggered: boolean }) {
   }, [triggered, stat.value, stat.isText]);
 
   return (
-    <div className="flex flex-col items-center text-center px-4 py-6 group">
-      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-        <Icon name={stat.icon as 'UserGroupIcon'} size={22} className="text-primary" />
+    <div className="flex flex-col items-center text-center px-2 py-5 sm:px-4 sm:py-6 group">
+      <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 sm:mb-3 group-hover:bg-primary/20 transition-colors">
+        <Icon name={stat.icon as 'UserGroupIcon'} size={16} className="text-primary sm:hidden" />
+        <Icon name={stat.icon as 'UserGroupIcon'} size={22} className="text-primary hidden sm:block" />
       </div>
-      <div className="font-display font-bold text-3xl sm:text-4xl text-primary mb-1" aria-live="polite">
+      <div className="font-display font-bold text-xl sm:text-3xl md:text-4xl text-primary mb-1 leading-tight" aria-live="polite">
         {stat.isText ? stat.textValue : `${count}${stat.suffix}`}
       </div>
-      <div className="text-muted-foreground text-xs sm:text-sm font-medium uppercase tracking-wide">
+      <div className="text-muted-foreground text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-wide leading-snug">
         {stat.label}
       </div>
     </div>
@@ -78,11 +79,18 @@ export default function ImpactStrip() {
   return (
     <section
       ref={ref}
-      className="relative bg-background py-12 border-y border-border"
+      className="relative bg-background py-8 sm:py-12 border-y border-border"
       aria-label="Impact statistics"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 divide-x divide-border">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6">
+        <div
+          className="
+            grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6
+            divide-y divide-border
+            sm:[&>*:nth-child(3n+2)]:border-x sm:[&>*:nth-child(3n+2)]:border-border sm:lg:[&>*:nth-child(3n+2)]:border-x-0
+            lg:divide-y-0 lg:divide-x
+          "
+        >
           {stats.map((stat) => (
             <CounterItem key={stat.label} stat={stat} triggered={triggered} />
           ))}
