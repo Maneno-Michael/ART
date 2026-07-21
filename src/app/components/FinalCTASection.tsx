@@ -20,9 +20,9 @@ export default function FinalCTASection() {
   return (
     <section
       ref={ref}
-      className="relative py-24 sm:py-32 overflow-hidden"
+      className="relative py-20 sm:py-32 overflow-hidden"
       aria-labelledby="final-cta-heading">
-      
+
       {/* Background image */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <AppImage
@@ -31,8 +31,9 @@ export default function FinalCTASection() {
           fill
           className="object-cover object-center"
           sizes="100vw" />
-        
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
+
+        {/* Stronger gradient on mobile for legibility against a variable photo */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/85 to-primary/90 sm:bg-gradient-to-r sm:from-primary/90 sm:via-primary/80 sm:to-primary/70" />
       </div>
 
       {/* Wave top */}
@@ -42,32 +43,32 @@ export default function FinalCTASection() {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 text-center">
         <div className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="section-label text-accent/80 mb-4 block">Join the Movement</span>
+          <span className="section-label text-accent/90 mb-3 sm:mb-4 block">Join the Movement</span>
           <h2
             id="final-cta-heading"
-            className="font-display text-4xl sm:text-5xl md:text-6xl text-primary-foreground mb-6 leading-tight">
-            
+            className="font-display text-[1.85rem] leading-[1.2] sm:text-5xl md:text-6xl text-primary-foreground mb-4 sm:mb-6 sm:leading-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.3)]">
+
             Building Resilient Communities Starts at the Grassroots
           </h2>
-          <p className="text-primary-foreground/80 text-base sm:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/90 sm:text-primary-foreground/80 text-sm sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto">
             Join us in strengthening food sovereignty, restoring ecosystems, protecting indigenous knowledge, and supporting communities building sustainable futures across Africa.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col xs:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               href="/get-involved"
-              className="btn-shimmer inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-full text-base font-semibold hover:bg-accent/90 transition-all shadow-xl focus-ring">
-              
+              className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-accent/90 transition-all shadow-xl focus-ring w-full xs:w-auto">
+
               Get Involved
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
             <Link
               href="/donate"
-              className="inline-flex items-center gap-2 border-2 border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-full text-base font-semibold hover:bg-primary-foreground/10 transition-all focus-ring">
-              
+              className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/40 text-primary-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-primary-foreground/10 transition-all focus-ring w-full xs:w-auto">
+
               Donate Now
             </Link>
           </div>
