@@ -10,7 +10,7 @@ const programs = [
   title: 'Agroecology',
   summary: 'We promote sustainable farming systems that restore soil health, strengthen biodiversity, reduce dependency on harmful external inputs, and support long-term environmental resilience.',
   href: '/programs-overview',
-  image: "/assets/images/center1.jpg",
+  image: "/assets/images/agri.jpg",
   imageAlt: 'ART Resilience Centers — community learning hub, demonstration farm, farmers in training session',
   tag: 'Agroecology',
   color: 'bg-primary/10 text-primary'
@@ -19,7 +19,7 @@ const programs = [
   title: 'Food Sovereignty',
   summary: 'We believe communities should have the right to define, control, and sustain their own food systems through indigenous seeds, local knowledge, and community-led production.',
   href: '/programs-overview',
-  image: "/assets/images/my food.jpeg",
+  image: "/assets/images/sec.jpg",
   imageAlt: 'My Food My Power — indigenous crops, women sorting and preserving seeds, seed saving activities',
   tag: 'Food Sovereignty',
   color: 'bg-accent/10 text-accent'
@@ -28,7 +28,7 @@ const programs = [
   title: 'Social Justice',
   summary: 'We work to address inequalities that limit access to land, leadership, opportunity, and participation for women, youth, and marginalized communities.',
   href: '/programs-overview',
-  image: "/assets/images/her.jpg",
+  image: "/assets/images/stew.jpg",
   imageAlt: 'Her Land Her Power — women farmers in community dialogue, women leadership activities',
   tag: 'Social Justice',
   color: 'bg-secondary/10 text-secondary'
@@ -46,7 +46,7 @@ const programs = [
   title: 'Community Leadership',
   summary: 'We believe lasting solutions are strongest when communities remain at the center of planning, implementation, and decision-making.',
   href: '/programs-overview',
-  image: "/assets/images/voices.jpeg",
+  image: "/assets/images/lid.jpg",
   imageAlt: 'Voices from the Roots — storytelling sessions, community interviews, documentation activities',
   tag: 'Community Leadership',
   color: 'bg-accent/10 text-accent',
