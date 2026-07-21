@@ -19,28 +19,28 @@ export default function OurStory() {
   return (
     <section
       ref={ref}
-      className="py-16 sm:py-20 bg-background"
+      className="py-12 sm:py-16 lg:py-20 bg-background overflow-hidden"
       aria-labelledby="story-heading">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Image */}
           <div className={`relative transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <div className="relative h-[380px] sm:h-[480px] group">
-              <div className="absolute inset-0 mask-arch overflow-hidden shadow-2xl bg-border">
+            <div className="relative h-[280px] xs:h-[320px] sm:h-[420px] md:h-[480px] group max-w-sm sm:max-w-none mx-auto">
+              <div className="absolute inset-0 mask-arch overflow-hidden shadow-xl sm:shadow-2xl bg-border">
                 <AppImage
                   src="/assets/images/story.jpg"
                   alt="Supporting image beside Our Story text — community and field context showing farmers engaged in agroecological activities"
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                  sizes="(max-width: 1024px) 100vw, 50vw" />
+                  className="object-cover sm:grayscale sm:group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 100vw, 50vw" />
                 
               </div>
               {/* Founded badge */}
-              <div className="absolute -bottom-4 -right-4 sm:-right-6 bg-card border border-border rounded-2xl shadow-xl p-4 z-10">
+              <div className="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 md:-right-6 bg-card border border-border rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2.5 sm:p-4 z-10">
                 <div className="text-center">
-                  <div className="font-display font-bold text-2xl text-primary">2018</div>
-                  <div className="text-muted-foreground text-xs">Founded in Kenya</div>
+                  <div className="font-display font-bold text-lg sm:text-2xl text-primary">2018</div>
+                  <div className="text-muted-foreground text-[10px] sm:text-xs whitespace-nowrap">Founded in Kenya</div>
                 </div>
               </div>
             </div>
@@ -48,15 +48,15 @@ export default function OurStory() {
 
           {/* Text */}
           <div className={`transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-            <span className="section-label text-accent mb-4 block">Our Story</span>
+            <span className="section-label text-accent mb-3 sm:mb-4 block">Our Story</span>
             <h2
               id="story-heading"
-              className="font-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-6 leading-tight">
+              className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 sm:mb-6 leading-tight">
               
               Rooted in Communities.{' '}
               <span className="italic text-primary">Driven by Justice.</span>
             </h2>
-            <div className="space-y-5 text-muted-foreground text-base leading-relaxed">
+            <div className="space-y-4 sm:space-y-5 text-muted-foreground text-sm sm:text-base leading-relaxed">
               <p>
                 African Roots Transformation (ART) was established in Kenya in response to the growing challenges facing farming communities across Africa; including climate change, soil degradation, shrinking land access, rising agricultural costs, and increasing food insecurity.
               </p>
