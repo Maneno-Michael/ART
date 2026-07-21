@@ -46,26 +46,49 @@ export default function FieldGallery() {
   return (
     <section
       ref={ref}
-      className="py-16 sm:py-20 bg-card"
+      className="py-12 sm:py-16 lg:py-20 bg-card overflow-hidden"
       aria-labelledby="gallery-heading">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className={`text-center mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className="section-label text-accent mb-3 block">In The Field</span>
+        <div className={`text-center mb-8 sm:mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <span className="section-label text-accent mb-2 sm:mb-3 block">In The Field</span>
           <h2
             id="gallery-heading"
-            className="font-display text-3xl sm:text-4xl text-foreground">
+            className="font-display text-2xl xs:text-3xl sm:text-4xl text-foreground px-2">
             
             Grounded in Community Action
           </h2>
         </div>
 
-        {/* Sticky 3-col gallery */}
-        <div className={`grid grid-cols-12 gap-3 transition-all duration-700 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+        {/* Mobile: swipeable one-image-at-a-time carousel */}
+        <div className={`sm:hidden transition-all duration-700 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar -mx-4 px-4 gap-3">
+            {galleryImages?.map((img, i) =>
+            <div
+              key={i}
+              className="relative flex-shrink-0 w-[85vw] h-64 xs:h-72 rounded-xl overflow-hidden snap-center">
+              
+                <AppImage
+                src={img?.src}
+                alt={img?.alt}
+                fill
+                className="object-cover"
+                sizes="85vw" />
+              
+              </div>
+            )}
+          </div>
+          <p className="text-muted-foreground/60 text-xs mt-3 text-center">
+            Swipe to see all images →
+          </p>
+        </div>
+
+        {/* Desktop/tablet: sticky 3-col masonry gallery */}
+        <div className={`hidden sm:grid grid-cols-3 gap-3 transition-all duration-700 ${visible ? 'opacity-100' : 'opacity-0'}`}>
           {/* Left column — scrolls */}
-          <div className="col-span-4 grid gap-3">
+          <div className="col-span-1 grid gap-3">
             {[galleryImages?.[0], galleryImages?.[1]]?.map((img, i) =>
-            <div key={i} className="relative h-52 sm:h-64 rounded-2xl overflow-hidden group">
+            <div key={i} className="relative h-52 md:h-64 rounded-2xl overflow-hidden group">
                 <AppImage
                 src={img?.src}
                 alt={img?.alt}
@@ -78,9 +101,9 @@ export default function FieldGallery() {
           </div>
 
           {/* Middle column — sticky */}
-          <div className="col-span-4 sticky top-24 h-fit grid gap-3">
+          <div className="col-span-1 sticky top-24 h-fit grid gap-3">
             {[galleryImages?.[2], galleryImages?.[3]]?.map((img, i) =>
-            <div key={i} className="relative h-52 sm:h-64 rounded-2xl overflow-hidden group">
+            <div key={i} className="relative h-52 md:h-64 rounded-2xl overflow-hidden group">
                 <AppImage
                 src={img?.src}
                 alt={img?.alt}
@@ -93,9 +116,9 @@ export default function FieldGallery() {
           </div>
 
           {/* Right column — scrolls */}
-          <div className="col-span-4 grid gap-3">
+          <div className="col-span-1 grid gap-3">
             {[galleryImages?.[4], galleryImages?.[5]]?.map((img, i) =>
-            <div key={i} className="relative h-52 sm:h-64 rounded-2xl overflow-hidden group">
+            <div key={i} className="relative h-52 md:h-64 rounded-2xl overflow-hidden group">
                 <AppImage
                 src={img?.src}
                 alt={img?.alt}
