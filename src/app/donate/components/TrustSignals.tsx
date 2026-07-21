@@ -42,23 +42,24 @@ export default function TrustSignals() {
   return (
     <section
       ref={ref}
-      className="py-14 bg-primary/5 border-y border-border"
+      className="py-10 sm:py-14 bg-primary/5 border-y border-border"
       aria-label="Trust and credibility signals"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {signals.map((signal, i) => (
             <div
               key={signal.title}
-              className={`flex items-start gap-4 transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+              className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <Icon name={signal.icon as 'ShieldCheckIcon'} size={20} className="text-primary" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Icon name={signal.icon as 'ShieldCheckIcon'} size={18} className="text-primary sm:hidden" />
+                <Icon name={signal.icon as 'ShieldCheckIcon'} size={20} className="text-primary hidden sm:block" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground text-sm mb-1">{signal.title}</h3>
-                <p className="text-muted-foreground text-xs leading-relaxed">{signal.description}</p>
+                <h3 className="font-semibold text-foreground text-xs sm:text-sm mb-1">{signal.title}</h3>
+                <p className="text-muted-foreground text-[11px] sm:text-xs leading-relaxed">{signal.description}</p>
               </div>
             </div>
           ))}
