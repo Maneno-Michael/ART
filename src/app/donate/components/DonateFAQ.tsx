@@ -6,7 +6,7 @@ import Icon from '@/components/ui/AppIcon';
 const faqs = [
   {
     question: 'Is ART a registered organization?',
-    answer: 'Yes. African Roots Transformation (ART) is registered in Kenya and operates as a nonprofit organization supporting community-led initiatives and development programs. Registration number: NGO/CERT/2018/0042.',
+    answer: 'Yes. African Roots Transformation (ART) is registered in Kenya and operates as a nonprofit organization supporting community-led initiatives and development programs. Registration number: CLG-87TKRADA.',
   },
   {
     question: 'How are donations used?',
